@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sensibol.lucidmusic.singstr">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        tools:replace="android:allowBackup"
+        android:name=".app.SingstrApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true" />
+
+    <meta-data android:name="com.webengage.sdk.android.environment" android:value="us"/>
+
+    <meta-data android:name="com.applozic.mobicomkit.notification.smallIcon"
+        android:resource="@mipmap/ic_launcher_round" /> <!-- Replace this with a valid resource name for Launcher white Icon -->
+
+
+</manifest>

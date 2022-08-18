@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:id="@+id/cl_root"
+    android:background="@color/bg_page">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Date of Birth"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+        <EditText
+            android:id="@+id/tvDay"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/bg_rounded_day"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:hint="Day"
+            android:maxLength="2"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvMonth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Month"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounded_day"
+            android:textSize="19sp"
+            app:layout_constraintStart_toEndOf="@id/tvDay"
+            app:layout_constraintEnd_toStartOf="@id/tvYear"
+            app:layout_constraintTop_toTopOf="@+id/tvDay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDay" />
+
+        <EditText
+            android:id="@+id/tvYear"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:layout_marginEnd="18dp"
+            android:gravity="center"
+            android:hint="Year"
+            android:maxLength="4"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounded_day"
+            android:textSize="19sp"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/tvMonth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDay"
+            />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Gender"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvYear" />
+
+        <TextView
+            android:id="@+id/tvMale"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center"
+            android:text="Male"
+            android:background="@drawable/bg_rounded_card_outline"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFemale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
+
+        <TextView
+            android:id="@+id/tvFemale"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Female"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounded_card_outline"
+            android:textSize="19sp"
+            app:layout_constraintStart_toEndOf="@id/tvMale"
+            app:layout_constraintEnd_toStartOf="@id/tvOther"
+            app:layout_constraintTop_toTopOf="@+id/tvMale"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMale" />
+
+        <TextView
+            android:id="@+id/tvOther"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="Other"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounded_card_outline"
+            android:textSize="19sp"
+            app:layout_constraintStart_toEndOf="@+id/tvFemale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMale"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMale"
+            />
+
+
+        <TextView
+            android:id="@+id/tvNextBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/bg_rounded_card_next"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMale"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:visibility="invisible"
+        android:id="@+id/inc_month_bottom_sheet"
+        layout="@layout/bottomsheet_month" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

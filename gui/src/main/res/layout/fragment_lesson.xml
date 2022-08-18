@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/vv_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:auto_show="false"
+            app:controller_layout_id="@layout/layout_exoplayer_controller_view"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:resize_mode="fill"
+            app:show_buffering="never"
+            app:shutter_background_color="@color/transparent"
+            app:use_controller="true" >
+
+            <ProgressBar
+                android:id="@+id/pb_loading1"
+                android:indeterminateTint="@color/white"
+                android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivThreeDots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_more_white_vert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/bg_card_practice" />
+
+        <ImageView
+            android:id="@+id/ivLessonThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_baseline_music_video_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/vv_lesson"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="@+id/vv_lesson"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/vv_lesson"
+            app:layout_constraintTop_toTopOf="@+id/vv_lesson"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--<ImageView
+            android:id="@+id/ivPlayPause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_pause"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/vv_lesson"
+            app:layout_constraintEnd_toEndOf="@+id/vv_lesson"
+            app:layout_constraintStart_toStartOf="@+id/vv_lesson"
+            app:layout_constraintTop_toTopOf="@+id/vv_lesson" />-->
+
+        <!--<androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="0:00"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_clock"
+            app:layout_constraintBottom_toBottomOf="@id/vv_lesson"
+            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:progress="0"
+            android:progressDrawable="@drawable/signstr_progress_bar"
+            android:splitTrack="false"
+            android:thumb="@drawable/blue_circle_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/vv_lesson"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--<ImageView
+            android:id="@+id/ivExpand"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_expand"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tv_duration"
+            app:layout_constraintEnd_toEndOf="parent" />-->
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            android:textColor="@color/secondary_1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vv_lesson"
+            tools:text="Tune" />
+
+        <ImageView
+            android:id="@+id/ivExpandMore"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_expand_more"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/bTitleBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/ivExpandMore"
+            app:layout_constraintBottom_toTopOf="@id/ivExpandMore"
+            app:layout_constraintStart_toStartOf="@id/ivExpandMore" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@id/bTitleBarrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvType"
+            tools:ignore="SpUsage"
+            tools:text="Sample big title of the video lesson which does not fit into single line" />
+
+        <ImageView
+            android:id="@+id/ivProTag"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_pro_emblem"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_rounded_grey_difficulty"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textAllCaps="true"
+            android:textColor="@color/enhance_text"
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@id/ivProTag"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:ignore="SpUsage"
+            tools:text="Beginner" />
+
+        <TextView
+            android:id="@+id/tvLessionPublishOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textColor="#66ffffff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_difficulty"
+            app:layout_constraintStart_toEndOf="@id/tv_difficulty"
+            app:layout_constraintTop_toTopOf="@id/tv_difficulty"
+            tools:text="2 Feb 2021" />
+
+        <include
+            android:id="@+id/incUpNext"
+            layout="@layout/tile_up_next"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:visibility="visible"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_difficulty" />
+
+        <TextView
+            android:id="@+id/buttonAddToMyList"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_rounded_card_outline"
+            android:drawableStart="@drawable/ic_plus"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/white"
+            android:drawablePadding="8dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:paddingHorizontal="48dp"
+            android:text="@string/add_to_my_list"
+            android:textColor="#FFFFFF"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@id/shareButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incUpNext" />
+
+        <TextView
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_rounded_card_outline"
+            android:drawableStart="@drawable/ic_share_baseline"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingHorizontal="24dp"
+            android:gravity="center_vertical"
+            android:text="Share"
+            android:drawablePadding="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/buttonAddToMyList"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonAddToMyList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonAddToMyList"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/dividerTitleNTeacher"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="#20FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonAddToMyList" />
+
+        <View
+            android:id="@+id/v_teacher"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePic"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintStart_toStartOf="@id/ivProfilePic"
+            app:layout_constraintEnd_toEndOf="@id/cb_Follow"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitXY"
+            tools:src="@tools:sample/avatars"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerTitleNTeacher"
+            app:shapeAppearance="@style/OvalImageViewShape" />
+
+        <TextView
+            android:id="@+id/tvArtistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePic"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            tools:text="Christie Mills" />
+
+        <TextView
+            android:id="@+id/tvArtistExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textColor="@color/enhance_text"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+            app:layout_constraintTop_toBottomOf="@id/tvArtistName"
+            tools:text="teacher_id" />
+
+        <CheckBox
+            android:id="@+id/cb_Follow"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/selector_follow_following_checkbox"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:button="@null"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="@string/follow"
+            android:textColor="@color/selector_color_follower_following"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePic" />
+
+        <ProgressBar
+            android:id="@+id/pb_follow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:indeterminateTint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/cb_Follow"
+            app:layout_constraintBottom_toBottomOf="@id/cb_Follow"
+            app:layout_constraintStart_toStartOf="@id/cb_Follow"
+            app:layout_constraintEnd_toEndOf="@id/cb_Follow"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_teacher_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="dividerTitleNTeacher, v_teacher, ivProfilePic, tvArtistName, cb_Follow"/>
+
+        <View
+            android:id="@+id/dividerTeacherNRest"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="#20FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePic" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_to_be_removed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerTeacherNRest">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShare"
+                android:layout_width="115dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_rounded_grey"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="@string/share"
+                android:textColor="@color/enhance_text"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_share"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddToMyList"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/bg_rounded_grey"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="@string/add_to_my_list"
+                android:textColor="@color/enhance_text"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvExercise"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center|start"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="Exercises"
+                android:textAllCaps="true"
+                android:textColor="@color/enhance_text"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvVocalExercise"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#1F1F1F"
+                android:drawableStart="@drawable/ic_pause"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExercise"
+                tools:text="Vocal exercise to improve tuning" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVocalExcercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExercise"
+                tools:itemCount="3"
+                tools:listitem="@layout/tile_vocal_excercise" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPracticeSongs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVocalExcercise"
+                tools:itemCount="3"
+                tools:listitem="@layout/tile_related_song" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRelatedSong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_rounded_option_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvPracticeSongs">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/iv_sing"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_shaded"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_rounded_primary_button"
+                        android:padding="7dp"
+                        android:src="@drawable/ic_sing_mic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvRelatedSongs"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/hkgrotesk_regular"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:text="Songs related to this lesson"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/iv_sing"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_label_view_next"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center|start"
+            android:text="View Next"
+            android:visibility="gone"
+            android:textAllCaps="true"
+            android:textColor="#52FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_to_be_removed" />
+
+        <include
+            android:id="@+id/inc_next_lesson"
+            layout="@layout/tile_lesson_big"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_view_next" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

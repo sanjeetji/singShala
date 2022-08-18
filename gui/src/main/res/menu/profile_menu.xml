@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/message"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/message"
+        android:visible="false"
+        />
+
+    <item
+        android:id="@+id/shareProfile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/share_profile" />
+
+    <item
+        android:id="@+id/reportUser"
+        android:icon="@drawable/ic_flag"
+        android:title="@string/report_user" />
+
+    <item
+        android:id="@+id/blockUser"
+        android:icon="@drawable/ic_baseline_block_24"
+        android:title="@string/block_user"
+        android:visible="false"/>
+</menu>

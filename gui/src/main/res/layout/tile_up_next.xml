@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="#18171D"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/ivMusic"
+        android:layout_width="92dp"
+        android:layout_height="0dp"
+        android:contentDescription="null"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvUpNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginHorizontal="16dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Up Next"
+        android:textColor="@color/following_color"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/ivMusic"
+        app:layout_constraintTop_toTopOf="@id/ivMusic"
+        app:layout_constraintEnd_toStartOf="@id/ivPlayPause"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/tvLessonName"/>
+
+    <TextView
+        android:id="@+id/tvLessonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        tools:text="Lesson Name"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toEndOf="@id/ivMusic"
+        app:layout_constraintEnd_toStartOf="@id/ivPlayPause"
+        app:layout_constraintTop_toBottomOf="@id/tvUpNext"
+        app:layout_constraintBottom_toBottomOf="@id/ivMusic"/>
+
+
+    <ImageView
+        android:id="@+id/ivPlayPause"
+        android:layout_width="50dp"
+        android:padding="16dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

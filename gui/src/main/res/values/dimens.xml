@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tile_song__horizontal_margin">18dp</dimen>
+    <dimen name="tile_cover__horizontal_margin">10dp</dimen>
+    <dimen name="tile_song__vertical_margin">8dp</dimen>
+    <dimen name="screen_horz_margin">16dp</dimen>
+    <dimen name="home_carousel_banner_margin">8dp</dimen>
+    <dimen name="content_margin_main_window">16dp</dimen>
+</resources>

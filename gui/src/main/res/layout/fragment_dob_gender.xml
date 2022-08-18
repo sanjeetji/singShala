@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:id="@+id/cl_root"
+    android:background="@color/bg_page">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_sharp_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Date of Birth"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@id/ivBack"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/tvDay"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/bg_rounded_day"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:hint="Day"
+            android:maxLength="2"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvMonth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Month"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounded_day"
+            android:textSize="19sp"
+            app:layout_constraintStart_toEndOf="@id/tvDay"
+            app:layout_constraintEnd_toStartOf="@id/tvYear"
+            app:layout_constraintTop_toTopOf="@+id/tvDay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDay" />
+
+        <EditText
+            android:id="@+id/tvYear"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:layout_marginEnd="18dp"
+            android:gravity="center"
+            android:hint="Year"
+            android:maxLength="4"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounded_day"
+            android:textSize="19sp"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/tvMonth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDay" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Gender"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvYear" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="32dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_gender">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:text="Male"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:background="@drawable/selector_round_blue_outline"/>
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:text="Female"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector_round_blue_outline"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_other"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:text="Non-Binary"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:background="@drawable/selector_round_blue_outline"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvNextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginHorizontal="32dp"
+            android:background="@drawable/selector_btn_enable_disable"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:indeterminateTint="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tvNextBtn"
+            app:layout_constraintBottom_toBottomOf="@id/tvNextBtn"
+            app:layout_constraintStart_toStartOf="@id/tvNextBtn"
+            app:layout_constraintEnd_toEndOf="@id/tvNextBtn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:visibility="invisible"
+        android:id="@+id/inc_month_bottom_sheet"
+        layout="@layout/bottomsheet_month" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

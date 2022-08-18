@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.contest.ContestFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_page">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/pv_video"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:resize_mode="zoom"
+            app:use_controller="false" />
+
+        <ImageView
+            android:id="@+id/iv_contest_preview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash_bg_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_show_contest_entry_cover"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:background="@color/blue"
+            android:padding="8dp"
+            android:text="Show Contest Entry Cover"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_contest_preview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_contest_preview" />
+
+        <ImageView
+            android:id="@+id/iv_pro_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pro_emblem"
+            app:layout_constraintBottom_toBottomOf="@id/space_between_video_n_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/space_between_video_n_details"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_contest_preview" />
+
+        <include
+            android:id="@+id/contest_winner_con"
+            layout="@layout/inc_contest_winner_congratulation"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            app:layout_constraintTop_toBottomOf="@id/space_between_video_n_details" />
+
+        <TextView
+            android:id="@+id/tv_started_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="Started 34 days ago"
+            android:textColor="#60FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contest_winner_con" />
+
+        <TextView
+            android:id="@+id/tv_contest_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="Get a change to sing in Saleem Suleman's Next Song"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_started_days" />
+
+        <TextView
+            android:id="@+id/tv_entries_in_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Entry close in"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_divider"
+            app:layout_constraintEnd_toStartOf="@id/tv_entries_end_in"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_divider" />
+
+        <TextView
+            android:id="@+id/tv_entries_end_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="2 days"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_divider"
+            app:layout_constraintEnd_toStartOf="@id/tv_divider"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tv_entries_in_title"
+            app:layout_constraintTop_toTopOf="@id/tv_divider" />
+
+        <TextView
+            android:id="@+id/tv_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:text="|"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_eligibility_title"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tv_entries_end_in"
+            app:layout_constraintTop_toBottomOf="@id/tv_contest_name" />
+
+        <TextView
+            android:id="@+id/tv_eligibility_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="center_horizontal"
+            android:text="Eligibility:"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_divider"
+            app:layout_constraintEnd_toStartOf="@id/tv_eligibility"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tv_divider"
+            app:layout_constraintTop_toTopOf="@id/tv_divider" />
+
+        <TextView
+            android:id="@+id/tv_eligibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="2 days"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tv_eligibility_title"
+            app:layout_constraintTop_toTopOf="@id/tv_divider" />
+
+        <TextView
+            android:id="@+id/tv_hosted_by_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_margin_main_window"
+            android:gravity="center_horizontal"
+            android:text="Hosted by"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_contest_host_logo"
+            app:layout_constraintEnd_toStartOf="@id/iv_contest_host_logo"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_contest_host_logo" />
+
+        <ImageView
+            android:id="@+id/iv_contest_host_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_splash_logo"
+            app:layout_constraintEnd_toStartOf="@id/tv_contest_hosted_by"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tv_hosted_by_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_divider" />
+
+        <TextView
+            android:id="@+id/tv_contest_hosted_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/content_margin_main_window"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="Sony Music India"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_contest_host_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/iv_contest_host_logo"
+            app:layout_constraintTop_toTopOf="@id/iv_contest_host_logo" />
+
+        <TextView
+            android:id="@+id/tv_btn_join_now"
+            android:layout_width="314dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_btn_practice_again"
+            android:elevation="10dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:text="Join Now"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:translationZ="10dp"
+            app:cornerRadius="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_contest_host_logo" />
+
+        <TextView
+            android:id="@+id/tv_already_joined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="245 Already Joined"
+            android:textColor="#60FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_btn_join_now" />
+
+        <TextView
+            android:id="@+id/tv_share_with_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_rounded_grey"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/white_ope_60"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="Share with Friends"
+            android:textColor="@color/white_ope_60"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_already_joined" />
+
+        <include
+            android:id="@+id/contest_entry_container"
+            layout="@layout/inc_contest_entry_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/tv_share_with_friend" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#50171717"
+            app:layout_constraintBottom_toBottomOf="@id/space_most_voted_bottom"
+            app:layout_constraintTop_toBottomOf="@id/space_most_voted_top" />
+
+        <View
+            android:id="@+id/space_most_voted_top"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            app:layout_constraintTop_toBottomOf="@id/contest_entry_container" />
+
+        <TextView
+            android:id="@+id/tv_most_voted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="@dimen/content_margin_main_window"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_horizontal"
+            android:text="Most Voted"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space_most_voted_top" />
+
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/rv_most_voted_covers"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="18dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_most_voted"-->
+        <!--            android:visibility="gone"-->
+        <!--            tools:listitem="@layout/tile_feed_cover" />-->
+
+        <View
+            android:id="@+id/space_most_voted_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_most_voted" />
+
+
+        <TextView
+            android:id="@+id/tv_contest_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="38dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Contest Details"
+            android:textAllCaps="true"
+            android:textColor="#60FFFFFF"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space_most_voted_bottom" />
+
+        <TextView
+            android:id="@+id/tv_prize_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Prize"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_contest_details" />
+
+        <TextView
+            android:id="@+id/tv_prize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+            android:textColor="#70FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_prize_title" />
+
+        <TextView
+            android:id="@+id/tv_how_to_enter_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="How to enter"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_prize" />
+
+        <TextView
+            android:id="@+id/tv_how_to_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+            android:textColor="#70FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_how_to_enter_title" />
+
+        <TextView
+            android:id="@+id/tv_rules_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Rules"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_how_to_enter" />
+
+        <TextView
+            android:id="@+id/tv_rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            android:textColor="#70FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rules_title" />
+
+        <TextView
+            android:id="@+id/tv_judging_criteria_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Judging Criteria"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rules" />
+
+        <TextView
+            android:id="@+id/tv_judging_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/content_margin_main_window"
+            android:layout_marginTop="13dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            android:textColor="#70FFFFFF"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_judging_criteria_title" />
+
+        <View
+            android:id="@+id/space_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_judging_criteria" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

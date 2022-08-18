@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_bar"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:src="#513B72"
+        app:layout_constraintBottom_toBottomOf="@+id/iv__frag_main__user_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_mainuser_outline" />
+
+    <ImageView
+        android:id="@+id/iv_mainuser_outline"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:src="@drawable/bg_darkblue"
+        app:layout_constraintBottom_toBottomOf="@+id/iv__frag_main__user_image"
+        app:layout_constraintEnd_toEndOf="@+id/iv__frag_main__user_image"
+        app:layout_constraintStart_toStartOf="@+id/iv__frag_main__user_image"
+        app:layout_constraintTop_toTopOf="@+id/iv__frag_main__user_image" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv__frag_main__user_image"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/ic_profile"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/iv_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+
+    <ImageView
+        android:id="@+id/iv_bg_level"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/bg_rounded_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mainuser_outline"
+        app:layout_constraintStart_toEndOf="@+id/iv_bar"
+        app:layout_constraintTop_toTopOf="@+id/iv_mainuser_outline" />
+
+    <TextView
+        android:id="@+id/tv_leveNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="47dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_level"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_level"
+        app:layout_constraintStart_toEndOf="@+id/iv_bar"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_level"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="22" />
+
+    <ProgressBar
+        android:id="@+id/pb_levelProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="190dp"
+        android:layout_height="9dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/signstr_progress_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/v_frag_main_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/v_frag_main_bg" />
+
+    <ImageView
+        android:id="@+id/iv_pb_levelno"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/bg_rounded_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_levelProgress"
+        app:layout_constraintEnd_toStartOf="@+id/pb_levelProgress"
+        app:layout_constraintTop_toTopOf="@+id/pb_levelProgress" />
+
+    <TextView
+        android:id="@+id/tv_current_lvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pb_levelno"
+        app:layout_constraintEnd_toEndOf="@+id/iv_pb_levelno"
+        app:layout_constraintStart_toStartOf="@+id/iv_pb_levelno"
+        app:layout_constraintTop_toTopOf="@+id/iv_pb_levelno"
+        tools:text="22" />
+
+    <View
+        android:id="@+id/v_frag_main_bg"
+        android:layout_width="94dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rounded_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pb_levelProgress"
+        app:layout_constraintTop_toBottomOf="@+id/tv_CurrentLevel" />
+
+    <ImageView
+        android:id="@+id/iv_bg_nextLevel_pbBar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/bg_rounded_card"
+        app:layout_constraintBottom_toBottomOf="@+id/v_frag_main_bg"
+        app:layout_constraintStart_toStartOf="@+id/v_frag_main_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_frag_main_bg" />
+
+    <TextView
+        android:id="@+id/tv_nextLevelNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_nextLevel_pbBar"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_nextLevel_pbBar"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/iv_bg_nextLevel_pbBar"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_nextLevel_pbBar"
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:text="23" />
+
+    <TextView
+        android:id="@+id/tv_nextLevelXP_req"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/song_subtitle"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_frag_main_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_frag_main_bg"
+        app:layout_constraintStart_toEndOf="@+id/iv_bg_nextLevel_pbBar"
+        app:layout_constraintTop_toTopOf="@+id/v_frag_main_bg"
+        tools:text="3,000 XP" />
+
+    <TextView
+        android:id="@+id/tv_info_XP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_XP"
+        tools:text="You require an additional 655XP to level up!" />
+
+    <Button
+        android:id="@+id/tv_Rewards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rewards"
+        android:drawableStart="@drawable/ic_icon_giftcard"
+        android:drawablePadding="3dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:paddingLeft="25dp"
+        android:paddingTop="11sp"
+        android:paddingRight="25dp"
+        android:paddingBottom="11sp"
+        android:text="Rewards"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_XP" />
+
+    <Button
+        android:id="@+id/tv_HowToEarnXP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_rounded_grey"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:paddingLeft="20dp"
+        android:paddingTop="11sp"
+        android:paddingRight="20dp"
+        android:paddingBottom="11sp"
+        android:text="How to Earn XP"
+        android:textColor="@color/song_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_XP" />
+
+    <TextView
+        android:id="@+id/tv_XP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP 2,345"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv__frag_main__user_image"
+        app:layout_constraintStart_toStartOf="@+id/iv__frag_main__user_image"
+        app:layout_constraintTop_toBottomOf="@+id/iv__frag_main__user_image" />
+
+    <TextView
+        android:id="@+id/tv_CurrentLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Current Level"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_info_XP"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_level"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_bar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bg_level"
+        app:layout_constraintVertical_bias="0.056" />
+
+
+    <RadioGroup
+        android:id="@+id/rgDifficultyLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_HowToEarnXP">
+
+        <RadioButton
+            android:id="@+id/rbTopSingstrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1.5"
+            android:button="@null"
+            android:checked="true"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="Top Singstrs"
+            android:textColor="@drawable/selector_radio_button_text_color" />
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RankedList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDifficultyLevel"
+        app:layout_constraintVertical_bias="0.0"
+        tools:itemCount="20"
+        tools:listitem="@layout/tile_leaderboard_rank" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_black_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_rounded_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profilePicture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/rankUser"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+    <TextView
+        android:id="@+id/tv_singstrName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_lvl"
+        app:layout_constraintStart_toEndOf="@+id/iv_profilePicture"
+        app:layout_constraintTop_toTopOf="@+id/iv_profilePicture"
+        tools:text="Singstr Name 5" />
+
+    <TextView
+        android:id="@+id/tv_XP_ranked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:textColor="#737373"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_singstrName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_singstrName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_singstrName"
+        tools:text="XP 900" />
+
+    <TextView
+        android:id="@+id/tv_lvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:text="lvl"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_rank"
+        app:layout_constraintEnd_toStartOf="@+id/iv_bg_rank"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_rank" />
+
+    <ImageView
+        android:id="@+id/iv_bg_rank"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/bg_rounded_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_XP_ranked"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/tv_singstrName" />
+
+    <TextView
+        android:id="@+id/tv_levelNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_rank"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_rank"
+        app:layout_constraintStart_toStartOf="@+id/iv_bg_rank"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_rank"
+        app:layout_constraintVertical_bias="0.43"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/rankUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:visibility="visible"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profilePicture"
+        app:layout_constraintEnd_toStartOf="@+id/iv_profilePicture"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/iv_profilePicture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="20dp"
+    android:background="@drawable/bg_rounded_darkyellow"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_woohoo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingLeft="31dp"
+        android:paddingRight="31dp"
+        android:text="Woohoo!"
+        android:textAlignment="gravity"
+        android:textColor="#EFC417"
+        android:textSize="28dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="@string/welcome_pro_text"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_woohoo"
+        app:layout_constraintStart_toStartOf="@+id/tv_woohoo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_woohoo" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:src="@drawable/ic_close"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profilePicture"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+    <ImageView
+        android:id="@+id/tvProTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pro_emblem"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profilePicture"
+        app:layout_constraintEnd_toEndOf="@id/iv_profilePicture"
+        app:layout_constraintStart_toStartOf="@id/iv_profilePicture"
+        app:layout_constraintTop_toBottomOf="@id/iv_profilePicture" />
+
+    <TextView
+        android:id="@+id/tv_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_profilePicture"
+        app:layout_constraintStart_toStartOf="@+id/iv_profilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/tvProTag"
+        tools:text="Anand Mishra" />
+
+    <TextView
+        android:id="@+id/tvDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_rounded_grey_button"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:text="Okay"
+        android:textColor="@color/song_subtitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_handle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

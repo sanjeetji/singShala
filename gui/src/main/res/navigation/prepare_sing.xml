@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prepare_sing_nav_graph"
+    app:startDestination="@id/songSelectorHostFragment">
+
+    <fragment
+        android:id="@+id/songSelectorHostFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.prepare.song.SongSelectorHostFragment"
+        android:label="SongSelectorHostFragment"
+        tools:layout="@layout/fragment_song_selector_host">
+        <argument
+            android:name="singMode"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_songSelectorHostFragment_to_singModeFragment"
+            app:destination="@id/singModeFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/singModeFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.prepare.mode.SingModeFragment"
+        android:label="SingModeFragment"
+        tools:layout="@layout/fragment_sing_mode">
+        <argument
+            android:name="songId"
+            app:argType="string" />
+        <argument
+            android:name="singMode"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>

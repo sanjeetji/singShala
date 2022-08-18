@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_otherUserRanks"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="26" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profilePicture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRank"
+        app:layout_constraintStart_toEndOf="@+id/tvRank"
+        app:layout_constraintTop_toTopOf="@+id/tvRank"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+    <TextView
+        android:id="@+id/tv_singstrName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_lvl"
+        app:layout_constraintStart_toEndOf="@+id/iv_profilePicture"
+        app:layout_constraintTop_toTopOf="@+id/iv_profilePicture"
+        tools:text="User Name" />
+
+    <TextView
+        android:id="@+id/tv_XP_ranked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:textColor="#737373"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_singstrName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_singstrName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_singstrName"
+        tools:text="XP 52,345" />
+
+    <TextView
+        android:id="@+id/tv_lvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:text="lvl"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_rank"
+        app:layout_constraintEnd_toStartOf="@+id/iv_bg_rank"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_rank" />
+
+    <ImageView
+        android:id="@+id/iv_bg_rank"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/bg_rounded_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_levelNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_rank"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_rank"
+        app:layout_constraintStart_toStartOf="@+id/iv_bg_rank"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_rank"
+        tools:text="45" />
+
+    <View
+        android:id="@+id/vLine1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:alpha="0.1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

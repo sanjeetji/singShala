@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+apply from: 'dependencies.gradle'
+
+buildscript {
+    ext {
+        kotlin_version = '1.4.31'
+        gradle_version = '4.1.3'
+        build_tools_version = '29.0.3'
+        nav_version = '2.3.3'
+        hilt_version = '2.32-alpha'
+        crashlytics_version = '2.5.2'
+        gms_version = '4.3.8'
+
+        compile_sdk_version = 31
+        min_sdk_version = 24
+        target_sdk_version = 31
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.gms:google-services:$gms_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlytics_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://applozic.jfrog.io/artifactory/applozic-android-sdk'
+        }
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

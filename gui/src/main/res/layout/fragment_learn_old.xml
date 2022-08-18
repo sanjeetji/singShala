@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/bg_page">
+
+       <!-- <include
+            android:id="@+id/includeHeader"
+            layout="@layout/item_learn_header"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/includeTabBar"
+            layout="@layout/tab_bar_learn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includeHeader" />-->
+
+        <RadioGroup
+            android:id="@+id/rgDifficultyLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rbAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/selector_learning_mode"
+                android:button="@null"
+                android:checked="true"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="ALL"
+                android:textColor="@drawable/selector_radio_button_text_color" />
+
+
+            <RadioButton
+                android:id="@+id/rbEasy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="2.2"
+                android:background="@drawable/selector_learning_mode"
+                android:button="@null"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="TUNE"
+                android:textColor="@drawable/selector_radio_button_text_color" />
+
+
+            <RadioButton
+                android:id="@+id/rbMed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/selector_learning_mode"
+                android:button="@null"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="TIMING"
+                android:textColor="@drawable/selector_radio_button_text_color" />
+
+
+            <RadioButton
+                android:id="@+id/rbHard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="3"
+                android:background="@drawable/selector_learning_mode"
+                android:button="@null"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="SCALES"
+                android:textColor="@drawable/selector_radio_button_text_color" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/ivLessonThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includeTabBar" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="8dp"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="4:03"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivLessonThumbnail"
+            app:layout_constraintStart_toStartOf="@id/ivLessonThumbnail" />
+
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            android:text="Tune"
+            android:textColor="@color/secondary_1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLessonThumbnail" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            tools:text="Pitch Technique 101"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+        <TextView
+            android:id="@+id/tvFreeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:padding="2dp"
+            android:text="Free"
+            android:textAllCaps="true"
+            android:textColor="@color/bg_rounded_rectangle_grey_difficulty"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLessonThumbnail" />
+
+
+        <TextView
+            android:id="@+id/tv_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_rounded_grey_difficulty"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            tools:text="Beginner"
+            android:textAllCaps="true"
+            android:textColor="@color/enhance_text"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <View
+            android:id="@+id/dividerTitleNTeacher"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/text_header_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_difficulty" />
+
+        <ProgressBar
+            android:id="@+id/pbTuning"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/tvTuning"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/black_circle"
+            android:indeterminate="false"
+            android:max="100"
+            android:padding="4dp"
+            android:progress="61"
+            android:progressDrawable="@drawable/circular_progress_average_tune"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerTitleNTeacher" />
+
+        <TextView
+            android:id="@+id/tvTuningScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            tools:text="32"
+            android:textColor="@color/primary1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/pbTuning"
+            app:layout_constraintEnd_toEndOf="@id/pbTuning"
+            app:layout_constraintStart_toStartOf="@id/pbTuning"
+            app:layout_constraintTop_toTopOf="@id/pbTuning" />
+
+        <TextView
+            android:id="@+id/tvTuningTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            android:text="Improve your Tuning"
+            android:textColor="@color/text_header_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/pbTuning"
+            app:layout_constraintStart_toEndOf="@id/tvTuningScore"
+            app:layout_constraintTop_toTopOf="@id/pbTuning" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImproveTuning"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTuningTitle"
+            tools:listitem="@layout/tile_lesson_mini" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="clQuestionLayout" />
+
+        <include
+            layout="@layout/tile_wrong_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvImproveTuning" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clQuestionLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_card"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvImproveTuning">
+
+            <TextView
+                android:id="@+id/tvQuestionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:maxLines="1"
+                android:text="@string/musical_knowledge"
+                android:textColor="@color/text_header_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:maxLines="1"
+                tools:text="@string/question"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvQuestionLabel" />
+
+            <TextView
+                android:id="@+id/tvOption1"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_option"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="12dp"
+                tools:text="@string/option"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+            <TextView
+                android:id="@+id/tvOption2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_option"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="12dp"
+                tools:text="@string/option"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOption1" />
+
+            <TextView
+                android:id="@+id/tvOption3"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_option"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="12dp"
+                tools:text="@string/option"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOption2" />
+
+            <TextView
+                android:id="@+id/tvOption4"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_option"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="12dp"
+                tools:text="@string/option"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOption3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pbTiming"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/black_circle"
+            android:indeterminate="false"
+            android:max="100"
+            android:padding="4dp"
+            android:progress="56"
+            android:progressDrawable="@drawable/circular_progress_average_timing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clQuestionLayout" />
+
+
+        <TextView
+            android:id="@+id/tvTimingScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            tools:text="32"
+            android:textColor="@color/secondary_2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/pbTiming"
+            app:layout_constraintEnd_toEndOf="@id/pbTiming"
+            app:layout_constraintStart_toStartOf="@id/pbTiming"
+            app:layout_constraintTop_toTopOf="@id/pbTiming" />
+
+        <TextView
+            android:id="@+id/tvTimingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            android:text="@string/improve_your_timing"
+            android:textColor="@color/text_header_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/pbTiming"
+            app:layout_constraintStart_toEndOf="@id/pbTiming"
+            app:layout_constraintTop_toTopOf="@id/pbTiming" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImproveTiming"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pbTiming"
+            tools:listitem="@layout/tile_lesson_mini" />
+
+        <TextView
+            android:id="@+id/tvCollectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:maxLines="1"
+            android:text="@string/collection"
+            android:textColor="@color/text_header_grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvImproveTiming" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCollection"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCollectionTitle"
+            tools:listitem="@layout/tile_lesson_mini" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

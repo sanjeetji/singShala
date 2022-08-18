@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "250061033071",
+    "project_id": "singstr-app",
+    "storage_bucket": "singstr-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250061033071:android:3488f8c2378e3a9d84c79a",
+        "android_client_info": {
+          "package_name": "com.lucidmusic.singstr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250061033071-5sms5fekdn8afk9dfg5r13k6d6c8mhdi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lucidmusic.singstr",
+            "certificate_hash": "71cb02e1b34471f0730bac8a04bdfe9f5c3d142d"
+          }
+        },
+        {
+          "client_id": "250061033071-k1m3d2ch9mv2ci107so5bbktghvhic37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lucidmusic.singstr",
+            "certificate_hash": "6dc3bbbe346e0dd3d2a97d09bb7bc94641978487"
+          }
+        },
+        {
+          "client_id": "250061033071-k5sie915n3qttijrshkh0uvnh9f9n85j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lucidmusic.singstr",
+            "certificate_hash": "d86b6f608abb4bc26212054fd97269d48f494573"
+          }
+        },
+        {
+          "client_id": "250061033071-306dfem0hdjd91jh9c3erplvkrbge947.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS0tPEFMlFLB7jsxbs9niIjCbGHJO1iQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250061033071-306dfem0hdjd91jh9c3erplvkrbge947.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "250061033071-c2a8778dgh5p9vei04k4dhp87fp64dcp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lucidmusic.singstr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

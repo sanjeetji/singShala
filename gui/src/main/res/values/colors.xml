@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="teal_500">#24DD7D</color>
+
+    <color name="colorPrimary">#D050FF</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="link_text_material_light">#3F5AF0</color>
+    <color name="green">#5DB427</color>
+    <color name="green_user_existence">#24DD7D</color>
+    <color name="goldish_yellow">#CCB012</color>
+
+    <color name="cross_color">#FD5839</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white_ope_70">#B3FFFFFF</color>
+    <color name="white_ope_60">#99FFFFFF</color>
+    <color name="white_ope_38">#61FFFFFF</color>
+    <color name="dark_brown">#171205</color>
+
+    <color name="bg_rounded_rectangle_view_all">#0DFFFFFF</color>
+    <color name="song_subtitle">#8CFFFFFF</color>
+    <color name="light_grey">#299B9B9B</color>
+    <color name="check_white">#FFFCFC</color>
+    <color name="bg_rounded_rectangle_grey">#16FFFFFF</color>
+    <color name="bg_rounded_rectangle_grey_difficulty">#33FFFFFF</color>
+    <color name="text_header_grey">#64FFFFFF</color>
+    <color name="timer_text">#80FFFFFF</color>
+    <color name="enhance_text">#96FFFFFF</color>
+    <color name="bg_page_transparent">#7729282E</color>
+    <color name="bg_page">#131216</color>
+    <color name="bg_card">#18171D</color>
+    <color name="bg_bottom_sheet">#8029282E</color>
+    <color name="text_grey">#707070</color>
+    <color name="bg_bottom_sheet1">#FF29282E</color>
+    <color name="bg_card_practice">#561F1F1F</color>
+    <color name="primary1">#D050FF</color>
+    <color name="secondary_1">#9440FF</color>
+    <color name="secondary_1_opp_30">#309440FF</color>
+    <color name="secondary_2">#3F5aF0</color>
+    <color name="lesson_card_bg">#131216</color>
+    <color name="bottomsheet_background_color">#18171D</color>
+    <color name="bg_red">#ED4343</color>
+    <color name="light_green">#5DB427</color>
+    <color name="darkred">#AD3C3C</color>
+    <color name="flag_saffron">#FF9933</color>
+    <color name="flag_green">#138808</color>
+    <color name="flag_navy_blue">#000080</color>
+    <color name="blue">#3F5AF0</color>
+    <color name="following_color">#7993FF</color>
+    <color name="bg_windows">#131216</color>
+    <color name="bg_windows_opp_90">#90131216</color>
+
+    <color name="bg_nav">#222127</color>
+    <color name="outline">#333232</color>
+    <color name="level">#B67CFF</color>
+    <color name="stroke">#333232</color>
+
+    <color name="applozic_theme_color_primary" tools:override="true">#29282E</color>
+    <color name="applozic_theme_color_primary_dark" tools:override="true">#29282E</color>
+</resources>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_page">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_back"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Detailed Analysis"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <VideoView
+            android:id="@+id/vvReviewVideo"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@id/tvXPMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+        <TextView
+            android:id="@+id/tvSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="SONG"
+            android:textColor="@color/timer_text"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@id/vvReviewVideo"
+            app:layout_constraintTop_toTopOf="@id/vvReviewVideo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSongLayout"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_rounded_card"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSong"
+            app:layout_constraintTop_toBottomOf="@id/tvSong">
+
+            <ImageView
+                android:id="@+id/ivSongThumbnail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_profile_placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/ivSongThumbnail"
+                app:layout_constraintTop_toTopOf="@id/ivSongThumbnail"
+                tools:text="Makhna" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSongArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/hkgrotesk_regular"
+                android:textColor="@color/timer_text"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivSongThumbnail"
+                app:layout_constraintStart_toEndOf="@id/ivSongThumbnail"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:text="Tanishk Bagchi, Yasser D…" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="DIFFICULTY"
+            android:textColor="@color/timer_text"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="@id/tvSong"
+            app:layout_constraintTop_toBottomOf="@id/clSongLayout" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/tvDifficulty"
+            app:layout_constraintTop_toBottomOf="@id/tvDifficulty">
+
+            <ImageView
+                android:id="@+id/ivDifficultyLevel"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/songType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                tools:text="Medium" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecordOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="RECORDED ON"
+            android:textColor="@color/timer_text"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvDifficulty"
+            app:layout_constraintEnd_toEndOf="@id/clSongLayout"
+            app:layout_constraintTop_toTopOf="@id/tvDifficulty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecordDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/tvRecordOn"
+            app:layout_constraintTop_toBottomOf="@id/tvRecordOn"
+            tools:text="12 Dec 2020" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvXPMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="146 XP earned from this cover"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRecordDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeWatched"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:text="@string/duration_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvXPMessage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="TOTAL SCORE"
+            android:textColor="@color/timer_text"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeWatched" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_bg_tune_score_balloon"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/pbMedium"
+            app:layout_constraintEnd_toStartOf="@id/pbMedium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pbMedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text="TUNE"
+                android:textColor="@color/white_ope_70"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvTuneScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                tools:text="61" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ProgressBar
+            android:id="@+id/pbMedium"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/progress_ring_medium"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressDrawable="@drawable/circular_progress_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalScore"
+            tools:progress="73" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_bg_timing_score_balloon"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/pbMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pbMedium"
+            app:layout_constraintTop_toTopOf="@id/pbMedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text="TIMING"
+                android:textColor="@color/white_ope_70"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvTimeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                tools:text="84" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tvFinalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:text="73"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/pbMedium"
+            app:layout_constraintEnd_toEndOf="@id/pbMedium"
+            app:layout_constraintStart_toStartOf="@id/pbMedium"
+            app:layout_constraintTop_toTopOf="@id/pbMedium" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llcDetailList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbMedium">
+
+            <RadioGroup
+                android:id="@+id/rgReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_radio_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="7dp"
+                    android:text="ALL"
+                    android:textColor="@drawable/radio_selector_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rbGood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_radio_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableStart="@drawable/green_circle"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="7dp"
+                    android:text="GOOD"
+                    android:textColor="@drawable/radio_selector_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rbAvg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_radio_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableStart="@drawable/yellow_circle"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="7dp"
+                    android:text="AVG"
+                    android:textColor="@drawable/radio_selector_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rbPoor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_radio_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableStart="@drawable/red_circle"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="7dp"
+                    android:text="POOR"
+                    android:textColor="@drawable/radio_selector_text_color" />
+
+            </RadioGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDetailList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical"
+                tools:listitem="@layout/tile_detailed" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_simpleAnalysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/barrier3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbMedium">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDetailCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llc_simpleAnalysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/hhgrotesk_bold"
+                        android:text="Detailed Analysis"
+                        android:textColor="@color/white_ope_38"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvSimpleMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:fontFamily="@font/hkgrotesk_regular"
+                        android:gravity="center"
+                        android:text="You got 3 lines perfectly and 2 lines need improvement"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMiniDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/tile_minidetail_textview" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llc_proDialogue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_bottom_round_darkyellow"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="25dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ll_logo"
+                        android:layout_width="200dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/ic_singshala_pro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/hhgrotesk_bold"
+                        android:gravity="center"
+                        android:text="@string/get_complete_analysis"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/tvBecomePro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_rounded_yellow"
+                        android:fontFamily="@font/hhgrotesk_bold"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:text="BECOME A PRO"
+                        android:textColor="@color/black" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvViewFullDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_comment_done_enabled"
+                android:elevation="5dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="View Full Detail Analysis"
+                android:textAlignment="gravity"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/cvDetailCard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvDetailCard" />
+
+            <TextView
+                android:id="@+id/tv_count_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text="2 Left"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvViewFullDetail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cl_simpleAnalysis"
+            app:layout_constraintEnd_toEndOf="@id/cl_simpleAnalysis"
+            app:layout_constraintStart_toStartOf="@id/cl_simpleAnalysis"
+            app:layout_constraintTop_toTopOf="@id/cl_simpleAnalysis" />
+
+        <TextView
+            android:id="@+id/tv_GoToHomePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_rounded_view_all"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="Go to Homepage"
+            android:textColor="@color/enhance_text"
+            android:textSize="14dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="llcDetailList, cl_simpleAnalysis" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

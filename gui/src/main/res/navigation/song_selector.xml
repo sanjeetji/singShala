@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/song_selector_nav_graph"
+    app:startDestination="@id/genresFragment">
+
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.prepare.song.GenresFragment"
+        android:label="GenresFragment"
+        tools:layout="@layout/fragment_genres">
+        <action
+            android:id="@+id/action_genresFragment_to_songsFragment"
+            app:destination="@id/songsFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/songsFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.prepare.song.SongsFragment"
+        android:label="SongsFragment"
+        tools:layout="@layout/fragment_songs">
+        <argument
+            android:name="genre"
+            android:defaultValue="@null"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Genre"
+            app:nullable="true" />
+        <argument
+            android:name="query"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+
+</navigation>

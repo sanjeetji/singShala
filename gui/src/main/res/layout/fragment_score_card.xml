@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_windows"
+    tools:context=".app.sing.result.cover.ScoreCardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".app.sing.result.cover.ScoreCardFragment">
+
+        <ImageButton
+            android:id="@+id/ibClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ib_button_selector"
+            android:scaleType="center"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_score_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="28dp"
+            android:background="@drawable/bg_score_card_gredient"
+            app:layout_constraintTop_toBottomOf="@id/ibClose">
+
+            <LinearLayout
+                android:id="@+id/ll_song_dec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_rounded_score_card_cover"
+                android:backgroundTint="#1F1F1F"
+                android:orientation="vertical"
+                android:paddingHorizontal="21dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/iv_user_image"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_cover_thumbnail"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splash_bg_img" />
+
+                <TextView
+                    android:id="@+id/tv_song_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:maxWidth="100dp"
+                    android:maxLines="2"
+                    android:text="Billie Jackson"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:maxWidth="100dp"
+                    android:text="Michael Jackson"
+                    android:textColor="@color/white_ope_60"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:background="@drawable/bg_rounded_score_card_cover"
+                android:backgroundTint="#1F1F1F"
+                android:translationX="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_user_image"
+                app:layout_constraintEnd_toEndOf="@id/iv_user_image"
+                app:layout_constraintStart_toStartOf="@id/iv_user_image"
+                app:layout_constraintTop_toTopOf="@id/iv_user_image" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_user_image"
+                android:layout_width="110dp"
+                android:background="@android:color/transparent"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash_bg_img"
+                android:translationX="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/ll_song_dec"
+                app:layout_constraintEnd_toStartOf="@id/ll_song_dec"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ll_song_dec"
+                app:shapeAppearance="@style/RoundCornerImageViewShape" />
+
+            <TextView
+                android:id="@+id/tv_your_score"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_marginStart="28dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text="80"
+                android:textColor="@color/white"
+                android:textSize="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_song_dec" />
+
+            <TextView
+                android:id="@+id/tv_score_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text=" /"
+                android:textColor="@color/white_ope_60"
+                android:textSize="32dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_your_score"
+                app:layout_constraintStart_toEndOf="@id/tv_your_score" />
+
+            <TextView
+                android:id="@+id/tv_total_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text="100"
+                android:textColor="@color/white_ope_60"
+                android:textSize="32dp"
+                android:translationY="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_your_score"
+                app:layout_constraintStart_toEndOf="@id/tv_score_divider" />
+
+            <TextView
+                android:id="@+id/tv_beat_my_score_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginTop="14dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:maxLines="2"
+                android:text="Beat my singing score for Billie Jackson"
+                android:textColor="@color/white"
+                android:textSize="21dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_your_score" />
+
+            <TextView
+                android:id="@+id/tv_check_your_score_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginTop="24dp"
+                android:text="Check out your score on"
+                android:textColor="@color/white_ope_60"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_beat_my_score_title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="48dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/singstr_logo"
+                app:layout_constraintBottom_toBottomOf="@id/tv_check_your_score_title"
+                app:layout_constraintStart_toEndOf="@id/tv_check_your_score_title"
+                app:layout_constraintTop_toTopOf="@id/tv_check_your_score_title"
+                app:tint="@color/white"/>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_check_your_score_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_download_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_rounded_grey"
+            android:drawableLeft="@drawable/ic_baseline_download"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/white_ope_60"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:text="Download Image"
+            android:textAllCaps="true"
+            android:textColor="@color/white_ope_60"
+            android:textSize="16dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_score_card" />
+
+        <TextView
+            android:id="@+id/tv_share_on_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share on"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/btn_download_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:textSize="16dp"/>
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/space_on_icons_top"
+            app:layout_constraintTop_toBottomOf="@id/tv_share_on_title"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_whatsapp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/img_whatapp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/space_on_icons_top"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="28dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_facebook"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whatsapp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_whatsapp"
+            app:layout_constraintStart_toStartOf="@id/iv_whatsapp"
+            app:layout_constraintEnd_toEndOf="@id/iv_whatsapp"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_facebook"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/img_facebook"
+            android:layout_marginHorizontal="36dp"
+            app:layout_constraintTop_toBottomOf="@id/space_on_icons_top"
+            app:layout_constraintStart_toEndOf="@id/iv_whatsapp"
+            app:layout_constraintEnd_toStartOf="@id/iv_singshala"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_facebook"
+            app:layout_constraintStart_toStartOf="@id/iv_facebook"
+            app:layout_constraintEnd_toEndOf="@id/iv_facebook"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_singshala"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="28dp"
+            android:src="@drawable/ic_splash_logo"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/space_on_icons_top"
+            app:layout_constraintStart_toEndOf="@id/iv_facebook"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_singshala"
+            app:layout_constraintStart_toStartOf="@id/iv_singshala"
+            app:layout_constraintEnd_toEndOf="@id/iv_singshala"
+            android:textColor="@color/white"/>
+
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/space_on_icons_middle"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_instagram"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/img_instagram"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/space_on_icons_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="28dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_twitter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram\nMessage"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_instagram"
+            app:layout_constraintStart_toStartOf="@id/iv_instagram"
+            app:layout_constraintEnd_toEndOf="@id/iv_instagram"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_twitter"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/img_twitter"
+            android:layout_marginHorizontal="36dp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/space_on_icons_middle"
+            app:layout_constraintStart_toEndOf="@id/iv_instagram"
+            app:layout_constraintEnd_toStartOf="@id/iv_others"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twitter"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_twitter"
+            app:layout_constraintStart_toStartOf="@id/iv_twitter"
+            app:layout_constraintEnd_toEndOf="@id/iv_twitter"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_others"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="28dp"
+            android:src="@drawable/ic_baseline_more"
+            app:tint="@color/white"
+            android:padding="8dp"
+            android:background="@drawable/green_circle"
+            android:backgroundTint="#323138"
+            app:layout_constraintTop_toTopOf="@id/iv_twitter"
+            app:layout_constraintBottom_toBottomOf="@id/iv_twitter"
+            app:layout_constraintStart_toEndOf="@id/iv_twitter"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_others"
+            app:layout_constraintStart_toStartOf="@id/iv_others"
+            app:layout_constraintEnd_toEndOf="@id/iv_others"
+            android:textColor="@color/white"/>
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/space_on_icons_bottom"
+            android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

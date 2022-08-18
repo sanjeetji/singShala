@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="20dp"
+    android:background="@drawable/bg_rounded_card"
+    android:backgroundTint="#171717"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_congratulation"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:text="Congratulations"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_daily_earned_xps"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:text="You got 20XP as a daily login reward"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_congratulation" />
+
+    <TextView
+        android:id="@+id/tv_daily_earned_xps_method"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="center"
+        android:text="Login Everyday for 10 days straight to receive 600 XP Bonus"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_daily_earned_xps" />
+
+    <View
+        android:id="@+id/space_1"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_daily_earned_xps_method" />
+
+    <CheckBox
+        android:id="@+id/cb_day_1_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_2_xp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_1_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_1_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_1_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_1_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_1_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_1_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_2_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_3_xp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cb_day_1_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_2_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_2_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_2_xp" />
+
+
+    <TextView
+        android:id="@+id/tv_day_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_2_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_2_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_2_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_3_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_4_xp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cb_day_2_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_3_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_3_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_3_xp" />
+
+
+    <TextView
+        android:id="@+id/tv_day_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_3_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_3_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_3_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_4_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_5_xp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cb_day_3_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_4_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_4_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_4_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_4_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_4_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_4_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_5_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cb_day_4_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_5_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_5_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_5_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_5_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_5_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_5_xp" />
+
+    <View
+        android:id="@+id/space_2"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_day_5" />
+
+    <CheckBox
+        android:id="@+id/cb_day_6_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="38dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_7_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_6_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_6_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_6_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_6_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_6_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_6_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_7_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_8_xp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cb_day_6_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_7_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_7_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_7_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_7_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_7_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_7_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_8_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/cb_day_9_xp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cb_day_7_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_8_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_8_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_8_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_8_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_8_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_8_xp" />
+
+    <CheckBox
+        android:id="@+id/cb_day_9_xp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="20\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="12dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cb_day_8_xp"
+        app:layout_constraintTop_toBottomOf="@id/space_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="10dp"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_9_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_9_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_9_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_9_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_9_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_9_xp" />
+
+    <View
+        android:id="@+id/space_3"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_day_9" />
+
+
+    <CheckBox
+        android:id="@+id/cb_day_10_xp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/selector_daily_login_xp_checkbox"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="500\n"
+        android:textColor="@color/daily_login_checkbox"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space_3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP"
+        android:textColor="@color/white_ope_38"
+        android:textSize="12dp"
+        android:translationY="-28dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_10_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_10_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_10_xp" />
+
+    <TextView
+        android:id="@+id/tv_day_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Day 1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/cb_day_10_xp"
+        app:layout_constraintStart_toStartOf="@id/cb_day_10_xp"
+        app:layout_constraintTop_toBottomOf="@id/cb_day_10_xp" />
+
+    <TextView
+        android:id="@+id/tv_btn_earn_more_xp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:background="@drawable/bg_rounded_grey"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:text="Earn more XP"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_day_10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

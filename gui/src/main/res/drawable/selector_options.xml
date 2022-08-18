@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--<item>
+        <selector>
+            <item android:state_checked="false">
+                <shape android:shape="rectangle">
+                    <size
+                        android:width="60dp"
+                        android:height="60dp" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/tile_outline" />
+                    <solid android:color="@color/app_background" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+            <item android:state_checked="true">
+                <shape android:shape="rectangle">
+                    <size
+                        android:width="60dp"
+                        android:height="60dp" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/tile_outline" />
+                    <corners android:radius="12dp" />
+                    <solid android:color="@color/radio_active" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+    <item
+        android:width="30dp"
+        android:height="30dp"
+        android:gravity="right|center"
+        android:right="15dp"
+        tools:ignore="UnusedAttribute">
+        <selector>
+            <item
+                android:drawable="@drawable/ic_circle_right"
+                android:state_checked="true" />
+            <item android:drawable="@drawable/ic_circle" />
+        </selector>
+    </item>-->
+    <item
+        android:gravity="left|center"
+        android:end="30dp"
+        tools:ignore="UnusedAttribute">
+        <selector>
+            <item
+                android:drawable="@drawable/ic_check"
+                android:state_checked="true"  />
+        </selector>
+    </item>
+</layer-list>

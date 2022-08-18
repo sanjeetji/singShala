@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    def ext = rootProject.extensions.getByName('ext')
+
+    compileSdkVersion ext.compile_sdk_version
+    buildToolsVersion ext.build_tools_version
+
+    defaultConfig {
+        minSdkVersion ext.min_sdk_version
+        targetSdkVersion ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    flavorDimensions "version"
+
+    productFlavors {
+        stage {
+            flavorDimensions "version"
+            buildConfigField "String", "API_BASE_URL", '"http://ec2-65-0-108-8.ap-south-1.compute.amazonaws.com:14000/v1.0/"'
+            buildConfigField "String", "API_BASE_URL_NODE_JS", '"http://ec2-65-0-108-8.ap-south-1.compute.amazonaws.com:3000/v1.0/"'
+            buildConfigField "String", "API_BASE_URL_MESSAGEING" , '"https://apps.applozic.com/rest/ws/"'
+        }
+
+        production {
+            flavorDimensions "version"
+            buildConfigField "String", "API_BASE_URL", '"https://api-singshala.sensibol.in/v1.0/"'
+            buildConfigField "String", "API_BASE_URL_NODE_JS", '"http://api-singshala.sensibol.in:3000/v1.0/"'
+            buildConfigField "String", "API_BASE_URL_MESSAGEING" , '"https://apps.applozic.com/rest/ws/"'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "org.apache.directory.studio:org.apache.commons.io:2.4"
+
+    // development
+    def appDependencies = rootProject.ext.appDependencies
+    api project(':base')
+    api project(':core')
+    api appDependencies.coroutines
+    api appDependencies.coroutinesAndroid
+    api appDependencies.kotlinStdlibJdk7
+    api appDependencies.retrofit
+    api appDependencies.retrofitMoshi
+    api appDependencies.moshi
+    api appDependencies.okhttp3
+    api appDependencies.hiltAndroid
+
+    kapt appDependencies.hiltCompiler
+    kapt appDependencies.moshiCodegen
+
+    // test
+    def testDependencies = rootProject.ext.testDependencies
+    testImplementation project(':testutils')
+    testImplementation testDependencies.moshi
+    testImplementation testDependencies.junit
+    testImplementation testDependencies.coroutinesTest
+    testImplementation testDependencies.mockk
+    testImplementation testDependencies.mockwebserver
+}

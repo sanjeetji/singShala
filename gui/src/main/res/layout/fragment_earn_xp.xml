@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="32dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBtnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="20dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="@string/you_can_earn_more_xp_by"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBtnBack" />
+
+        <TextView
+            android:id="@+id/txvTitleSingSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="36dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="@string/singing_songs"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvTitle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/txvTitleSingSongs"
+            app:layout_constraintTop_toTopOf="@id/txvTitleSingSongs"
+            app:layout_constraintEnd_toEndOf="@id/txvSingSongDesc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upto"
+                android:textColor="@color/white"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 600 XP"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/green"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txvSingSongDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="Hit all the right notes with perfect timings when you record a cover to get higher scores. Multiply your score by choosing more difficult songs."
+            android:textColor="#99FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvTitleSingSongs" />
+
+        <TextView
+            android:id="@+id/txvBtnRecordNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="@string/sing_a_song"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvSingSongDesc" />
+
+        <View
+            android:id="@+id/v_sing_song"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#99FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvBtnRecordNow" />
+
+        <TextView
+            android:id="@+id/txvTitlePractice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="@string/practice"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_sing_song" />
+
+        <TextView
+            android:id="@+id/txvPractice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="Put in a solid 15-minutes of practice to earn 100 XP everyday!"
+            android:textColor="#99FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvTitlePractice" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/txvTitlePractice"
+            app:layout_constraintTop_toTopOf="@id/txvTitlePractice"
+            app:layout_constraintEnd_toEndOf="@id/txvSingSongDesc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upto"
+                android:textColor="@color/white"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 200 XP"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/green"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txvBtnPracticeNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="Practice Now"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvPractice" />
+
+        <View
+            android:id="@+id/v_practice_song"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="20dp"
+            android:background="#99FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvBtnPracticeNow" />
+
+        <TextView
+            android:id="@+id/txvTitleAnswerMCQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="Answer MCQs"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_practice_song" />
+
+        <TextView
+            android:id="@+id/txvAnswerMCQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="Check your music knowledge and get XP on right answers"
+            android:textColor="#99FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvTitleAnswerMCQ" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/txvTitleAnswerMCQ"
+            app:layout_constraintTop_toTopOf="@id/txvTitleAnswerMCQ"
+            app:layout_constraintEnd_toEndOf="@id/txvSingSongDesc">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 XP"
+                android:textColor="@color/white"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txvBtnAnswerMCQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="Practice Now"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvAnswerMCQ" />
+
+        <View
+            android:id="@+id/v_answer_msq"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#99FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvBtnAnswerMCQ" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="txvTitleDailyChallenges, txvDesDailyChallenges, ll_daily_challenge, txvTitleTodaysChallenges, inc_daily_challenge, v_daily_challenge"/>
+        <TextView
+            android:id="@+id/txvTitleDailyChallenges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="@string/daily_challenges"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_answer_msq" />
+
+        <LinearLayout
+            android:id="@+id/ll_daily_challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/txvTitleDailyChallenges"
+            app:layout_constraintTop_toTopOf="@id/txvTitleDailyChallenges"
+            app:layout_constraintEnd_toEndOf="@id/txvSingSongDesc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Triple XP"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/green"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txvDesDailyChallenges"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="Take up the ‘Challenge of the Day’ &amp; earn an additional 50 XP when you publish it."
+            android:textColor="#99FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvTitleDailyChallenges" />
+
+        <TextView
+            android:id="@+id/txvTitleTodaysChallenges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="@string/today_s_challenges"
+            android:textAllCaps="true"
+            android:textColor="#A06CFF"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvDesDailyChallenges" />
+
+        <include
+            android:id="@+id/inc_daily_challenge"
+            layout="@layout/tile_song_with_sing_cta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvTitleTodaysChallenges" />
+
+        <View
+            android:id="@+id/v_daily_challenge"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="20dp"
+            android:background="#99FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inc_daily_challenge" />
+
+        <TextView
+            android:id="@+id/tv_learn_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:text="@string/learn"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inc_daily_challenge" />
+
+        <TextView
+            android:id="@+id/txvDesLearn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="Earn 10 XP by watching a full lesson &amp; completing all exercises (If available)."
+            android:textColor="#99FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_learn_label" />
+
+        <TextView
+            android:id="@+id/txvBtnWatchLesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="Watch Lessons"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvDesLearn" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="txvBtnWatchLesson, txvDesLearn, tv_learn_label"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

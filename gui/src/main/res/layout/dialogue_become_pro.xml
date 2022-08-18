@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="20dp"
+    android:background="@drawable/bg_rounded_darkyellow"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvOpps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingLeft="31dp"
+        android:paddingRight="31dp"
+        android:text="@string/oops"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_woohoo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingLeft="31dp"
+        android:paddingRight="31dp"
+        android:text="@string/need_pro_access"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOpps" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:text="@string/take_learning_up"
+        android:textColor="#66FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/tv_woohoo"
+        app:layout_constraintStart_toStartOf="@+id/tv_woohoo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_woohoo" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ll_logo"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_singshala_pro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <TextView
+        android:id="@+id/tvBecomePro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_rounded_yellow"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="BECOME A PRO"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_logo"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

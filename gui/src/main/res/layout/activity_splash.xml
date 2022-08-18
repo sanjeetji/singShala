@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+
+    <ImageView
+        android:layout_width="49dp"
+        android:layout_height="79dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_splash_logo" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="75dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPoweredBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="32dp"
+
+            android:alpha="0.5"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:text="Powered By "
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:layout_width="121dp"
+            android:layout_height="21dp"
+            android:src="@drawable/ic_powred_by" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvVersionInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.3"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        tools:ignore="SpUsage"
+        tools:text="0.0.1-1-2371f47-release\n2021-02-21T17:10:26.743+0530" />
+
+    <ImageView
+        android:id="@+id/iv_stage_ribbon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_stage"
+        android:visibility="gone" />
+
+</RelativeLayout>

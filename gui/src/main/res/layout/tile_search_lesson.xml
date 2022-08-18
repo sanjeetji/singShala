@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/lesson_card_bg">
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="18dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLessonTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:maxLines="2"
+        android:minLines="1"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+        app:layout_constraintTop_toTopOf="@id/ivThumbnail"
+        tools:text="10 Singing Techniques to Improve Your Voice perfectly.." />
+
+    <TextView
+        android:id="@+id/tvPrimaryTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:padding="2dp"
+        android:textAllCaps="true"
+        android:textColor="@color/secondary_2"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+        app:layout_constraintTop_toBottomOf="@id/tvLessonTitle"
+        tools:text="Tuning" />
+
+    <TextView
+        android:id="@+id/tvLessonDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:padding="2dp"
+        android:textColor="@color/timer_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPrimaryTag"
+        app:layout_constraintTop_toBottomOf="@id/tvLessonTitle"
+        tools:text="Easy" />
+</androidx.constraintlayout.widget.ConstraintLayout>

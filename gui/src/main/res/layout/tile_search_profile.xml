@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="16dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cv_profilePic"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="11dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_Username"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
+        app:layout_constraintStart_toEndOf="@id/cv_profilePic"
+        app:layout_constraintTop_toTopOf="@id/cv_profilePic"
+        tools:ignore="SpUsage"
+        tools:text="Darshan Raval" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:alpha="0.5"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_profilePic"
+        app:layout_constraintStart_toEndOf="@id/cv_profilePic"
+        app:layout_constraintTop_toBottomOf="@id/tv_Username"
+        tools:ignore="SpUsage"
+        tools:text="\@darshanrawalofficial" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_sharp_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Pick Username"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivBack"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUserName"
+        style="@style/MyTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:hint="Username"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_username_existence"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="21dp"
+        android:visibility="visible"
+        tools:src="@drawable/cancel_icon"
+        app:layout_constraintStart_toStartOf="@id/tilUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tilUserName" />
+
+    <TextView
+        android:id="@+id/tv_username_existence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:textColor="@color/cross_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_username_existence"
+        app:layout_constraintStart_toEndOf="@+id/iv_username_existence"
+        app:layout_constraintTop_toTopOf="@+id/iv_username_existence"
+        tools:text="username not available, enter different one" />
+
+    <TextView
+        android:id="@+id/tvNextBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/selector_btn_enable_disable"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:text="Next"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tilUserName"
+        app:layout_constraintStart_toStartOf="@id/tilUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_existence" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvNextBtn"
+        app:layout_constraintBottom_toBottomOf="@id/tvNextBtn"
+        app:layout_constraintStart_toStartOf="@id/tvNextBtn"
+        app:layout_constraintEnd_toEndOf="@id/tvNextBtn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

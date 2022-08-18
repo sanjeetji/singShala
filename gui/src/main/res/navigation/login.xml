@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@+id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+            android:id="@+id/to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.login.VerifyOtpFragment"
+        android:label="VerifyOtpFragment"
+        tools:layout="@layout/fragment_verify_otp">
+        <action
+            android:id="@+id/to_userFirstLastNameFragment"
+            app:destination="@id/userFirstLastNameFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@+id/loginFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFirstLastNameFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.login.UserFirstLastNameFragment"
+        android:label="UserFirstLastNameFragment"
+        tools:layout="@layout/fragment_user_first_last_name">
+        <action
+            android:id="@+id/to_userNameFragment"
+            app:destination="@id/userNameFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userNameFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.login.UserNameFragment"
+        android:label="UserNameFragment"
+        tools:layout="@layout/fragment_user_name">
+        <action
+            android:id="@+id/to_userGenderFragment"
+            app:destination="@id/userGenderFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userGenderFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.login.UserGenderFragment"
+        android:label="UserGenderFragment"
+        tools:layout="@layout/fragment_user_gender">
+        <action
+            android:id="@+id/to_singerTypeFragment"
+            app:destination="@id/singerTypeFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/singerTypeFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.login.SingerTypeFragment"
+        android:label="SingerTypeFragment"
+        tools:layout="@layout/fragment_singer_type"></fragment>
+
+
+</navigation>

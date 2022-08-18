@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    tools:context=".app.SingstrActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragmentSingstr"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/bnvAppBottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/singstr" />
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bnvAppBottomNav_old"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@color/bg_nav"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:itemIconTint="@color/icon_tint"-->
+<!--        app:itemTextColor="@color/white"-->
+<!--        app:itemTextAppearanceActive="@color/white"-->
+<!--        app:itemTextAppearanceInactive="@android:color/transparent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:menu="@menu/bottom_nav" />-->
+
+    <com.sensibol.lucidmusic.singstr.gui.app.customs.navigation_view.ImageBottomNavigationView
+        android:id="@+id/bnvAppBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bg_nav"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/icon_tint"
+        app:itemTextColor="@color/white"
+        app:itemTextAppearanceActive="@color/white"
+        app:itemTextAppearanceInactive="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+<!--    <com.google.android.material.imageview.ShapeableImageView-->
+<!--        android:id="@+id/iv_user_image"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:background="@drawable/ic_profile"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:translationZ="16dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/bnvAppBottomNav"-->
+<!--        app:layout_constraintTop_toTopOf="@id/bnvAppBottomNav"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/bnvAppBottomNav"-->
+<!--        app:shapeAppearance="@style/OvalImageViewShape" />-->
+
+
+
+    <ImageView
+        android:id="@+id/iv_stage_ribbon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_stage"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

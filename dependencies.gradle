@@ -1,0 +1,167 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "s3://com.sensibol.lib.s3.amazonaws.com"
+            credentials(AwsCredentials) {
+                accessKey "AKIAW7H7JT7F7WO5PZW2"
+                secretKey "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"
+            }
+        }
+    }
+}
+
+ext {
+    //Android libraries
+    appcompat_version = '1.2.0'
+    core_version = '1.3.2'
+    constraintlayout_version = '1.1.3'
+    fragment_version = '1.3.0'
+    activity_version = '1.2.0'
+    navigation_version = '2.3.3'
+    recycler_view_version = '1.1.0'
+    card_view_version = '1.0.0'
+    lifecycle_version = '2.2.0'
+    preference_version = '1.1.0'
+    play_service_auth_version = '19.0.0'
+    firebase_auth_version = '6.4.0'
+    firebase_bom_version = '26.7.0'
+    camera_version = '1.1.0-alpha02'
+    camera_view_version = '1.0.0-alpha22'
+    hilt_x_version = '1.0.0-alpha03'
+    google_ad_version = '20.1.0'
+    exo_player_verison = '2.14.0'
+    billing_version = '4.0.0'
+    flexbox_version = '3.0.0'
+
+    //Third party libraries
+    karaoke_version = '2.0.18'
+    glide_version = '4.11.0'
+    coroutines_version = '1.3.7'
+    timber_version = '4.7.1'
+    retrofit_version = '2.9.0'
+    moshi_version = '1.9.2'
+    okhttp_logging_interceptor_version = '4.9.0'
+    web_engage_version = '3.+'
+    install_referrer_version = '1.1.1'
+    facebook_analytics_version = '5.15.3'
+    messaging_version="5.102.0"
+
+    // Testing
+    junit_version = '4.13.1'
+    junit_androidx_version = '1.1.2'
+    runner_version = '1.3.0'
+    rules_version = '1.3.0'
+    orchestrator_version = '1.2.0'
+    mockk_version = '1.10.0'
+    mockwebserver_version = '4.7.2'
+    espresso_version = '3.3.0'
+
+    //Acceptance Testing
+//    runner_version = '1.0.2-alpha1'
+//    espresso_version = '3.0.2-alpha1'
+
+    //Development
+//    leakCanaryVersion = '1.5'
+
+    appDependencies = [
+            core              : "androidx.core:core-ktx:$core_version",
+            appcompat         : "androidx.appcompat:appcompat:$appcompat_version",
+            constraintlayout  : "androidx.constraintlayout:constraintlayout:$constraintlayout_version",
+            fragmentKtx       : "androidx.fragment:fragment-ktx:$fragment_version",
+            activityKtx       : "androidx.activity:activity-ktx:$activity_version",
+            lifecyleViewModel : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            lifecyleLiveData  : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+            lifecycleRuntime  : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version",
+            navFragment       : "androidx.navigation:navigation-fragment-ktx:$navigation_version",
+            navUi             : "androidx.navigation:navigation-ui-ktx:$navigation_version",
+            recyclerview      : "androidx.recyclerview:recyclerview:$recycler_view_version",
+            cardview          : "androidx.cardview:cardview:$card_view_version",
+            preference        : "androidx.preference:preference:$preference_version",
+            camera2           : "androidx.camera:camera-camera2:$camera_version",
+            cameraLifecycle   : "androidx.camera:camera-lifecycle:$camera_version",
+            cameraView        : "androidx.camera:camera-view:$camera_view_version",
+            billing           : "com.android.billingclient:billing-ktx:$billing_version",
+            googleAd          : "com.google.android.gms:play-services-ads:$google_ad_version",
+            playServiceAuth   : "com.google.android.gms:play-services-auth:$play_service_auth_version",
+            exoPlayerCore     : "com.google.android.exoplayer:exoplayer-core:$exo_player_verison",
+            exoPlayerUi       : "com.google.android.exoplayer:exoplayer-ui:$exo_player_verison",
+            exoPlayerHls      : "com.google.android.exoplayer:exoplayer-hls:$exo_player_verison",
+            flexbox           : "com.google.android.flexbox:flexbox:$flexbox_version",
+            firebaseBoM       : "com.google.firebase:firebase-bom:$firebase_bom_version",
+            dynamicLink       : 'com.google.firebase:firebase-dynamic-links-ktx',
+            analytics         : "com.google.firebase:firebase-analytics-ktx",
+            messaging         : "com.google.firebase:firebase-messaging-ktx",
+            crashlytics       : "com.google.firebase:firebase-crashlytics-ktx",
+            kotlinStdlib      : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlinStdlibJdk7  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            coroutines        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
+            coroutinesAndroid : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version",
+            timber            : "com.jakewharton.timber:timber:$timber_version",
+            retrofit          : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitMoshi     : "com.squareup.retrofit2:converter-moshi:$retrofit_version",
+            moshi             : "com.squareup.moshi:moshi-kotlin:$moshi_version",
+            moshiCodegen      : "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version",
+            okhttp3           : "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_interceptor_version",
+            glide             : "com.github.bumptech.glide:glide:$glide_version",
+            hiltAndroid       : "com.google.dagger:hilt-android:$hilt_version",
+            hiltCompiler      : "com.google.dagger:hilt-compiler:$hilt_version",
+//            hiltXCompiler     : "androidx.hilt:hilt-compiler:$hilt_x_version",
+            hiltXCommon       : "androidx.hilt:hilt-common:$hilt_x_version",
+            hiltXViewModel    : "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_x_version",
+            hiltXNavFrag      : "androidx.hilt:hilt-navigation-fragment:$hilt_x_version",
+            karaoke           : "com.lucidmusic.singster.sensibol:karaoke:$karaoke_version",
+            web_engage        : "com.webengage:android-sdk:$web_engage_version",
+            install_referrer  : "com.android.installreferrer:installreferrer:$install_referrer_version",
+            billingLibrary    : "com.android.billingclient:billing-ktx:$billing_version",
+            facebook_analytics: "com.facebook.android:facebook-android-sdk:$facebook_analytics_version",
+         //   mesaging          : "com.applozic.communication.uiwidget:mobicomkitui::$messaging_version"
+//            cardView                : "com.android.support:cardview-v7:$appCompat_version",
+//            design                  : "com.android.support:design:$appCompat_version",
+//            androidAnnotations      : "com.android.support:support-annotations:$appCompat_version",
+//            archComponents          : "android.arch.lifecycle:extensions:$archComponents_version",
+//            archComponentsCompiler  : "android.arch.lifecycle:compiler:$archComponents_version",
+//            glide                   : "com.github.bumptech.glide:glide:$glide_version",
+//            javaxAnnotation         : "javax.annotation:jsr250-api:$javaxAnnotations_version",
+//            javaxInject             : "javax.inject:javax.inject:$javaxInject_version",
+//            okhttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_interceptor_version",
+    ]
+
+    testDependencies = [
+            junit          : "junit:junit:$junit_version",
+            junitAndroidX  : "androidx.test.ext:junit:$junit_androidx_version",
+            testRunner     : "androidx.test:runner:$runner_version",
+            testRules      : "androidx.test:rules:$rules_version",
+            fragmentTesting: "androidx.fragment:fragment-testing:$fragment_version",
+            orchestrator   : "androidx.test:orchestrator:$orchestrator_version",
+            espressoCore   : "androidx.test.espresso:espresso-core:$espresso_version",
+            espressoIntents: "androidx.test.espresso:espresso-intents:$espresso_version",
+            navTesting     : "androidx.navigation:navigation-testing:$navigation_version",
+            coroutinesTest : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version",
+            mockk          : "io.mockk:mockk:$mockk_version",
+            moshi          : "com.squareup.moshi:moshi-kotlin:$moshi_version",
+            mockwebserver  : "com.squareup.okhttp3:mockwebserver:$mockwebserver_version",
+            hitlTesting    : "com.google.dagger:hilt-android-testing:$hilt_version",
+            hiltCompiler   : "com.google.dagger:hilt-android-compiler:$hilt_version",
+
+//            kotlin     : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+//            kotlinTest : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+//            robolectric: "org.robolectric:robolectric:$robolectric_version",
+//            mockito    : "com.nhaarman:mockito-kotlin:$mockito_version",
+//            kluent     : "org.amshove.kluent:kluent:$kluent_version",
+    ]
+
+    acceptanceTesting = [
+//            testRunner        : "com.android.support.test:runner:$runner_version",
+//            testRules         : "com.android.support.test:rules:$runner_version",
+//            espressoCore      : "com.android.support.test.espresso:espresso-core:$espresso_version",
+//            espressoIntents   : "com.android.support.test.espresso:espresso-intents:$espresso_version",
+//            androidAnnotations: "com.android.support:support-annotations:$appCompat_version",
+    ]
+
+    development = [
+//            leakCanary    : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+//            leakCanaryNoop: "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+    ]
+}

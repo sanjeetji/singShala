@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sensibol.lucidmusic.singstr.gui">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application android:theme="@style/AppTheme">
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.SingstrActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <nav-graph android:value="@navigation/singstr" />
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".app.player.VideoPlayerActivity"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name=".app.notifications.AppFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9498179823538437~8344657248" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--        messaging api setup-->
+        <meta-data android:name="com.applozic.application.key"
+            android:value="18c8701b2d1a4838e673b1aa4d9eae" /> <!-- Replace with your Applozic App ID -->
+
+        <meta-data android:name="main_folder_name"
+            android:value="MessagesMedia"
+            tools:node="replace"/>
+        <!-- If you do not set this tag then by default the attachment folder name would be Applozic. Thats why we are using replace node-->
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAYB1vPc4cpn_FJv68eS_ZGe1UasBNwxLI" />  <!--Replace with your geo api key from google developer console  -->
+        <!-- For testing purpose use AIzaSyAYB1vPc4cpn_FJv68eS_ZGe1UasBNwxLI
+        To disable the location sharing via map add this line ApplozicSetting.getInstance(context).disableLocationSharingViaMap(); in onSuccess of Applozic UserLoginTask -->
+
+        <meta-data android:name="activity.open.on.notification"
+            tools:node="replace" android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" /> <!-- NOTE : Do NOT change this value -->
+
+        <meta-data android:name="com.package.name"
+            android:value="${applicationId}" /> <!-- NOTE: Do NOT change this, it should remain same i.e 'com.package.name' -->
+
+<!--        <activity android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"-->
+<!--            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:parentActivityName=".app.SingstrActivity"-->
+<!--            android:theme="@style/ApplozicTheme"-->
+<!--            android:launchMode="singleTask"-->
+<!--            tools:node="replace">-->
+<!--            &lt;!&ndash; Parent activity meta-data to support API level 7+ &ndash;&gt;-->
+<!--            <meta-data-->
+<!--                android:name="android.support.PARENT_ACTIVITY"-->
+<!--                android:value=".app.SingstrActivity" />-->
+<!--        </activity>-->
+
+
+      <!--   <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+         <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>-->
+    </application>
+
+</manifest>

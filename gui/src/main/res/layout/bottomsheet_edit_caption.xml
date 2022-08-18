@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_root"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:behavior_draggable="true"
+    app:behavior_fitToContents="true"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:id="@+id/v_commentView"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_round_top_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Done"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/selector_enable_disable"
+        android:backgroundTint="@color/secondary_1"
+        android:enabled="false"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:text="@string/done"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/v_commentView"
+        app:layout_constraintStart_toStartOf="@+id/v_commentView"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_bottom_sheet_comment"
+        android:imeOptions="flagNoExtractUi"
+        app:counterEnabled="true"
+        app:counterMaxLength="150"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v_commentView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_bottom_sheet_comment"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="top"
+            android:inputType="textFilter"
+            android:maxLength="150"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout">
+
+        <TextView
+            android:id="@+id/tv_charCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="0"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="/"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/maxCharCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="150"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

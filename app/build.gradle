@@ -1,0 +1,145 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+apply from: 'version.gradle'
+apply from: 'git-hash.gradle'
+
+Properties releaseProperties = new Properties()
+releaseProperties.load(project.file('release.properties').newDataInputStream())
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file(releaseProperties.getProperty('store.path'))
+            storePassword releaseProperties.getProperty('store.password')
+            keyAlias releaseProperties.getProperty('key.alias')
+            keyPassword releaseProperties.getProperty('key.password')
+        }
+    }
+
+    if (gradle.startParameter.taskNames.contains(":app:assembleProductionRelease")) {
+        println("Incrementing Version")
+//        myVersion.increment()
+    }
+
+    def ext = rootProject.extensions.getByName('ext')
+
+    compileSdkVersion ext.compile_sdk_version
+    buildToolsVersion ext.build_tools_version
+
+    defaultConfig {
+        applicationId "com.lucidmusic.singstr"
+        minSdkVersion ext.min_sdk_version
+        targetSdkVersion ext.target_sdk_version
+        versionCode = myVersion.versionCode
+        versionName = myVersion.versionName
+
+        def myBuildName = "$versionCode-$versionName-$myGitHash"
+
+        buildConfigField "int", "VERSION_CODE", "" + versionCode
+        buildConfigField "String", "VERSION_NAME", "\"$versionName\""
+        buildConfigField "int", "MAJOR_VERSION_NUMBER", "$myVersion.majorNumber"
+        buildConfigField "int", "MINOR_VERSION_NUMBER", "$myVersion.minorNumber"
+        buildConfigField "int", "BUILD_VERSION_NUMBER", "$myVersion.buildNumber"
+        buildConfigField "String", "VERSION_HASH", "" + "\"$myGitHash\""
+        buildConfigField "String", "BUILD_NAME", "" + "\"$myBuildName\""
+        buildConfigField "String", "RELEASE_TIMESTAMP", "\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\""
+
+        archivesBaseName = "singShala-v$myBuildName"
+        signingConfig signingConfigs.release
+
+        buildConfigField "String", "WEBENGAGE_LICENSE_KEY", '"82617810"'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField "String", "RELEASE_TIMESTAMP", "\"" + new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(Calendar.getInstance().getTime()) + "\""
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    flavorDimensions "version"
+
+    productFlavors {
+        stage {
+            flavorDimensions "version"
+            versionNameSuffix = "-stage"
+        }
+        production {
+            flavorDimensions "version"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation platform(appDependencies.firebaseBoM)
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+
+
+    def appDependencies = rootProject.ext.appDependencies
+    def testDependencies = rootProject.ext.testDependencies
+    def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+    def developmentDependencies = rootProject.ext.development
+
+    // development
+    implementation project(':base')
+    implementation project(':gui')
+    implementation project(':db')
+    implementation project(':network')
+    implementation project(':filesystem')
+    implementation project(':mobicomkitui')
+    implementation project(':mobicommons')
+    implementation project(path: ':mobicomkit')
+
+    //mobicommons
+
+//mobicomkitui
+    implementation appDependencies.core
+    implementation appDependencies.appcompat
+    implementation appDependencies.constraintlayout
+    implementation appDependencies.kotlinStdlib
+    implementation appDependencies.kotlinStdlibJdk7
+    implementation appDependencies.coroutines
+    implementation appDependencies.coroutinesAndroid
+    implementation appDependencies.timber
+    implementation appDependencies.analytics
+    implementation appDependencies.crashlytics
+    implementation appDependencies.web_engage
+    implementation appDependencies.install_referrer
+    implementation appDependencies.hiltAndroid
+    implementation appDependencies.facebook_analytics
+
+    kapt appDependencies.hiltCompiler
+
+    // test
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.junitAndroidX
+}

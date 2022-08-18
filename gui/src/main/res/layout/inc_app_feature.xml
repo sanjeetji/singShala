@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/v__frag_main__practice_card_bg"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="@drawable/bg_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cv_startPic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/star_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v__frag_main__practice_card_bg"
+        app:layout_constraintBottom_toBottomOf="@id/v__frag_main__practice_card_bg"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+    <TextView
+        android:id="@+id/tvquestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:textStyle="bold"
+        android:text="What Makes Singshala So Unique ?"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/cv_startPic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvAppFeatures"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:id="@+id/tvAppFeatures"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:text="View App features"
+        android:textColor="@android:color/black"
+        android:textSize="13dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvquestion"
+        app:layout_constraintStart_toStartOf="@+id/tvquestion" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

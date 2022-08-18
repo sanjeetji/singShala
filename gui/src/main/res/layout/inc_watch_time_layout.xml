@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:background="@drawable/bg_rounded_user_statics_card"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tv_total_watch_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Total Watch Time"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_user_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_watch_time_label"
+        app:shapeAppearance="@style/OvalImageViewShape"
+        android:src="@drawable/ic_watch" />
+
+    <TextView
+        android:id="@+id/tv_timing_digit_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        tools:text="1"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_timing_matrix1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/iv_user_image"
+        app:layout_constraintTop_toTopOf="@id/iv_user_image" />
+
+    <TextView
+        android:id="@+id/tv_timing_matrix1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/white"
+        tools:textSize="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tv_timing_digit_one"
+        app:layout_constraintTop_toTopOf="@id/tv_timing_digit_one"
+        tools:text="Hours" />
+
+    <TextView
+        android:id="@+id/tv_timing_digit_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        tools:text="23"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_timing_matrix_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/iv_user_image"
+        app:layout_constraintBottom_toBottomOf="@id/iv_user_image" />
+
+
+    <TextView
+        android:id="@+id/tv_timing_matrix_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tv_timing_digit_two"
+        app:layout_constraintTop_toTopOf="@id/tv_timing_digit_two"
+        tools:text="Mins" />
+</androidx.constraintlayout.widget.ConstraintLayout>

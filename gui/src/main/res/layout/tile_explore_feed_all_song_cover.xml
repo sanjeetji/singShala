@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="4dp"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:foreground="@drawable/bg_tile_explore_cover_overlay"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/CoverThumbnail"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUserName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:drawablePadding="4dp"
+        android:elevation="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_song_title"
+        app:layout_constraintStart_toStartOf="@id/iv_thumbnail"
+        app:layout_constraintEnd_toEndOf="@id/iv_thumbnail"
+        tools:ignore="SpUsage"
+        tools:text="user007" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_song_title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="4dp"
+        android:elevation="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawableTint="@color/white_ope_60"
+        android:drawableLeft="@drawable/ic_music_node"
+        android:textColor="@color/white_ope_60"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_thumbnail"
+        app:layout_constraintStart_toStartOf="@id/iv_thumbnail"
+        app:layout_constraintEnd_toEndOf="@id/iv_thumbnail"
+        tools:ignore="SpUsage"
+        tools:text="O mere dil k chain chain aae" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

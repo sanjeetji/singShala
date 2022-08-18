@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/bg_rounded_card"
+    android:backgroundTint="@color/black">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clReportVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:paddingEnd="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_reportContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:text="Report Content"
+            android:textColor="@color/song_subtitle"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_reportUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:text="Report User"
+            android:textColor="@color/song_subtitle"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reportContent" />
+
+
+
+        <TextView
+            android:id="@+id/tv_blockUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:text="Block"
+            android:textColor="@color/bg_red"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reportUser" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

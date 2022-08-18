@@ -1,0 +1,78 @@
+ext {
+    myVersion = MyVersion.fromPropFile(file('version.properties'))
+    println "Current version: " + myVersion
+}
+
+class MyVersion {
+    private File versionPropsFile;
+
+    private int versionCode
+    private int majorNumber, minorNumber, buildNumber
+
+    static MyVersion fromPropFile(File versionPropsFile) {
+        MyVersion v = new MyVersion()
+        v.versionPropsFile = versionPropsFile
+        v.readFromFile()
+        return v
+    }
+
+    @Override
+    String toString() {
+        return versionCode + "-" + versionName
+    }
+
+    int getVersionCode() {
+        return versionCode
+    }
+
+    String getVersionName() {
+        return "" + majorNumber + "." + minorNumber + "." + buildNumber
+    }
+
+    int getMajorNumber() {
+        return majorNumber
+    }
+
+    int getMinorNumber() {
+        return minorNumber
+    }
+
+    int getBuildNumber() {
+        return buildNumber
+    }
+
+    void increment() {
+        versionCode++
+        buildNumber++
+        writeToFile()
+    }
+
+    private readFromFile() {
+        if (versionPropsFile.canRead()) {
+            Properties versionProps = new Properties()
+            versionProps.load(new FileInputStream(versionPropsFile))
+            this.versionCode = versionProps['VERSION_CODE'].toInteger()
+            this.majorNumber = versionProps['MAJOR_VERSION'].toInteger()
+            this.minorNumber = versionProps['MINOR_VERSION'].toInteger()
+            this.buildNumber = versionProps['BUILD_VERSION'].toInteger()
+        } else {
+            throw new FileNotFoundException("Could not read version.properties!")
+        }
+    }
+
+    private writeToFile() {
+        if (versionPropsFile.canRead()) {
+            Properties versionProps = new Properties()
+            versionProps.load(new FileInputStream(versionPropsFile))
+            versionProps['VERSION_CODE'] = "" + this.versionCode
+            versionProps['MAJOR_VERSION'] = "" + this.majorNumber
+            versionProps['MINOR_VERSION'] = "" + this.minorNumber
+            versionProps['BUILD_VERSION'] = "" + this.buildNumber
+            versionProps.store(versionPropsFile.newWriter(), null)
+        } else {
+            throw new FileNotFoundException("Could not read version.properties!")
+        }
+    }
+}
+
+

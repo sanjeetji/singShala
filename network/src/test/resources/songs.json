@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "data": {
+    "songs": [
+      {
+        "id": "song_id_01",
+        "order": 0,
+        "title": "Song Title 01",
+        "album": "Album Song Title 01",
+        "year": 2021,
+        "language": "Hindi",
+        "artists": [
+          {
+            "id": "artist_id_01",
+            "name": "Artist01 Name"
+          }
+        ],
+        "genres": [
+          "Rock"
+        ],
+        "duration": "90",
+        "difficulty": "Easy",
+        "thumbnail_url": "www.thumbnail_url.com",
+        "preview_url": "www.preview_url.com",
+        "media_url": "www.media_url.com",
+        "is_avail": true,
+        "learn_mode_available": true,
+        "usase": [
+          {
+            "premium": true
+          }
+        ]
+      },
+      {
+        "id": "song_id_02",
+        "order": 1,
+        "title": "Song Title 02",
+        "album": "Album Song Title 02",
+        "year": 2021,
+        "language": "Hindi",
+        "artists": [
+          {
+            "id": "artist_id_02",
+            "name": "Artist02 Name"
+          }
+        ],
+        "genres": [
+          "Pop"
+        ],
+        "duration": "90",
+        "difficulty": "Easy",
+        "thumbnail_url": "www.thumbnail_url.com",
+        "preview_url": "www.preview_url.com",
+        "media_url": "www.media_url.com",
+        "is_avail": true,
+        "learn_mode_available": true,
+        "usase": [
+          {
+            "premium": true
+          }
+        ]
+      }
+    ]
+  }
+}

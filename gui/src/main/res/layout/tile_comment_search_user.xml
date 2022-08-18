@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clNotifications"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#29282E"
+    android:padding="4dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/OvalImageViewShape" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintTop_toTopOf="@id/ivProfilePic"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfilePic"
+        tools:text="Darshan Raval" />
+
+
+    <ImageView
+        android:id="@+id/ivVerified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:src="@drawable/ic_check_circle"
+        android:textColor="@color/song_subtitle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+        app:layout_constraintStart_toEndOf="@id/tvUserName"
+        app:layout_constraintTop_toTopOf="@id/tvUserName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

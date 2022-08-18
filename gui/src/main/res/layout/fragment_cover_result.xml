@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nsv_mail_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:visibility="visible">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/bg_page"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_your_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:text="YOUR SCORE"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvsubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:text="Only you can view your score.\nGo ahead &amp; publish!"
+            android:textAlignment="center"
+            android:textColor="@color/song_subtitle"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_your_score" />
+
+        <LinearLayout
+            android:id="@+id/llCommonScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvsubHeader">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTuning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:alpha="0.6"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:text="@string/tune"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbTuning"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tvTuning"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/black_circle"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="61"
+                    android:progressDrawable="@drawable/circular_progress_tuning" />
+
+                <TextView
+                    android:id="@+id/tvTuningScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="49sp"
+                    tools:text="61" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp">
+
+                <TextView
+                    android:id="@+id/tvTiming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:alpha="0.6"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:text="@string/timing"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbTiming"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/tvTiming"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/black_circle"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progressDrawable="@drawable/circular_progress_timing"
+                    tools:progress="84" />
+
+
+                <TextView
+                    android:id="@+id/tvTimingScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="49sp"
+                    tools:text="81" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFinalScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tvsubHeader">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvAverage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.6"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbFinal"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tvAverage"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/progress_ring_final"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progressDrawable="@drawable/circular_progress_final"
+                    tools:progress="61" />
+
+
+                <TextView
+                    android:id="@+id/tvFinalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/hhgrotesk_bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="49sp"
+                    tools:text="61" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDifficultyMultiplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/llFinalScore">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/hkgrotesk_regular"
+                android:gravity="center"
+                android:text="Difficulty : "
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/tvDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                tools:text="Medium" />
+
+            <TextView
+                android:id="@+id/tvX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:clipToPadding="false"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:textSize="16dp"
+                tools:text="x2" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_xp_earned_bg_large"
+            android:layout_width="295dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0.46"
+            android:background="@drawable/xp_earned_bg_large"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_xp_multiplier_message" />
+
+        <TextView
+            android:id="@+id/tv_xp_multiplier_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:text="@string/your_xp_has_muliplied"
+            android:textAlignment="center"
+            android:textColor="@color/song_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDifficultyMultiplier" />
+
+        <RelativeLayout
+            android:id="@+id/rl_xp_earned_bg"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/bg_earned_xp"
+            android:paddingVertical="20dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_xp_multiplier_message">
+
+            <TextView
+                android:id="@+id/tvXPEarnedHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:text="XP EARNED"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/tvXPEarned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvXPEarnedHeader"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:textColor="@color/white"
+                android:textSize="49dp"
+                tools:ignore="SpUsage"
+                tools:text="140" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_xp_credit_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_next"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:text="Get 2x more XP after publishing"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_xp_earned_bg" />
+
+        <Button
+            android:id="@+id/btn_share_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_rounded_grey"
+            android:drawableLeft="@drawable/ic_share_baseline"
+            android:drawableTint="@color/white_ope_60"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:drawablePadding="8dp"
+            android:text="Share your score"
+            android:textAllCaps="true"
+            android:textColor="@color/white_ope_60"
+            android:textSize="16dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/btn_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_xp_earned_bg"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/tv_why_score_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:text="Why is my score low?"
+            android:textColor="@color/white_ope_60"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_share_score"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <View
+            android:id="@+id/underline_why_score_low"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/white_ope_60"
+            app:layout_constraintEnd_toEndOf="@id/tv_why_score_low"
+            app:layout_constraintStart_toStartOf="@id/tv_why_score_low"
+            app:layout_constraintTop_toBottomOf="@id/tv_why_score_low" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_rounded_grey"
+            android:backgroundTint="@color/secondary_1"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_why_score_low"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

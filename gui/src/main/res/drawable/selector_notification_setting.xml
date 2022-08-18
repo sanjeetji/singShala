@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/purple_500" android:state_checked="true" >
+        <color android:color="@color/purple_500"/>
+    </item>
+    <item android:drawable="@color/bg_rounded_rectangle_grey" android:state_checked="false" >
+        <color android:color="@color/bg_rounded_rectangle_grey"/>
+    </item>
+</selector>

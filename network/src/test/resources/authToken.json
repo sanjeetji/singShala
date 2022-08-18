@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "data": {
+    "tokenModel": {
+      "accessToken": "accessToken",
+      "tokenType": "tokenType",
+      "expiry": "expiry"
+    },
+    "isNewUser": true
+  }
+}

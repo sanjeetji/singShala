@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/singstr_nav_graph"
+    app:startDestination="@+id/homeFragment">
+
+    <include app:graph="@navigation/on_boarding" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <deepLink
+            android:id="@+id/deepLinkHomeFragment"
+            app:uri="https://www.singshala.com/app/home" />
+
+        <action
+            android:id="@+id/to_on_boarding_nav_graph"
+            app:destination="@id/on_boarding_nav_graph" />
+        <action
+            android:id="@+id/to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+        <action
+            android:id="@+id/to_genericFeedFragment"
+            app:destination="@id/genericFeedFragment" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_learnFragment"
+            app:destination="@id/learnFragment" />
+        <action
+            android:id="@+id/to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/to_exclusiveFeaturesFragment"
+            app:destination="@id/exclusiveFeaturesFragment" />
+        <action
+            android:id="@+id/to_earnXpFragment"
+            app:destination="@id/earnXpFragment" />
+        <action
+            android:id="@+id/to_contestFragment"
+            app:destination="@id/contestFragment" />
+
+        <action
+            android:id="@+id/to_claimFreeSubscriptionFragment"
+            app:destination="@id/claimFreeSubscriptionFragment"/>
+        <action
+            android:id="@+id/to_lessonListFragment"
+            app:destination="@id/lessonListFragment" />
+        <action
+            android:id="@+id/to_conceptLessonListFragment"
+            app:destination="@id/conceptLessonListFragment" />
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.LearnFragment"
+        android:label="LearnFragment"
+        tools:layout="@layout/fragment_learn">
+        <argument
+            android:name="filterType"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLinkLearnFragment"
+            app:uri="https://www.singshala.com/app/shala" />
+
+<!--        <deepLink
+            android:id="@+id/deepLinkLearnFragment"
+            app:uri="https://www.singshala.com/exercise" />-->
+
+        <action
+            android:id="@+id/to_learn_nav_graph"
+            app:destination="@id/learn_nav_graph" />
+        <action
+            android:id="@+id/to_myListFragment"
+            app:destination="@id/myListFragment" />
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_lessonListFragment"
+            app:destination="@id/lessonListFragment" />
+        <action
+            android:id="@+id/to_conceptLessonListFragment"
+            app:destination="@id/conceptLessonListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/academyFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.academy.AcademyFragment"
+        android:label="AcademyFragment"
+        tools:layout="@layout/fragment_academy">
+
+        <deepLink
+            android:id="@+id/deepLinkAcademyFragment"
+            app:uri="https://www.singshala.com/app/learn/academy" />
+
+        <action
+            android:id="@+id/to_lessonListFragment"
+            app:destination="@id/lessonListFragment" />
+        <action
+            android:id="@+id/to_conceptLessonListFragment"
+            app:destination="@id/conceptLessonListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.explore.ExploreFragment"
+        android:label="ExploreFragment"
+        tools:layout="@layout/fragment_explore">
+        <deepLink
+            android:id="@+id/deepLinkExploreFragment"
+            app:uri="https://www.singshala.com/app/explore" />
+
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_songFeedFragment"
+            app:destination="@id/songFeedFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+        <action
+            android:id="@+id/to_genericFeedFragment"
+            app:destination="@id/genericFeedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tuneTimingFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.academy.TuneTimingFragment"
+        android:label="TuneTiming"
+        tools:layout="@layout/fragment_tuning_and_timing" />
+
+    <fragment
+        android:id="@+id/lessonFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.lesson.LessonFragment"
+        android:label="LessonFragment"
+        tools:layout="@layout/fragment_lesson">
+        <argument
+            android:name="lessonId"
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink1LessonFragment"
+            app:uri="https://www.singshala.com/app/lessons/{lessonId}" />
+        <deepLink
+            android:id="@+id/deepLink2LessonFragment"
+            app:uri="https://singshala.com/app/lessons/{lessonId}" />
+        <action
+            android:id="@+id/to_exerciseLauncherFragment"
+            app:destination="@id/exerciseLauncherFrag" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_videoPlayerActivity"
+            app:destination="@id/videoPlayerActivity">
+            <argument
+                android:name="lesson"
+                app:argType="com.sensibol.lucidmusic.singstr.domain.model.Lesson"
+                app:nullable="true" />
+            <argument
+                android:name="isUserPro"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/to_self"
+            app:destination="@id/lessonFragment"
+            app:popUpTo="@id/lessonFragment"
+            app:popUpToInclusive="true" />
+<!--        <action-->
+<!--            android:id="@+id/to_teacherDetailFragment"-->
+<!--            app:destination="@id/teacherDetailFragment" />-->
+        <action
+            android:id="@+id/to_proMembershipFragment"
+            app:destination="@id/proMembershipFragment" />
+        <action
+            android:id="@+id/to_proSubscriptionPlanFragment"
+            app:destination="@id/proSubscriptionPlanFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_lessonFragment"
+            app:destination="@id/lessonFragment">
+            <argument
+                android:name="lessonId"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment">
+            <argument
+                android:name="userId"
+                app:argType="string" />
+        </action>
+        <argument
+            android:name="searchKeyword"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/teacherDetailFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.teacher.self.TeacherDetailsFragment"
+        android:label="TeacherDetailsFragment"
+        tools:layout="@layout/fragment_teacher_details">
+        <argument
+            android:name="teacherId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.notifications.NotificationsFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <deepLink
+            android:id="@+id/deepLinkOwnProfileFragment"
+            app:uri="https://www.singshala.com/app/profile/self" />
+        <deepLink
+            android:id="@+id/deepLinkOwnProfileFragment2"
+            app:uri="uri://singshala/app/users/self" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_playCoverFragment"
+            app:destination="@id/playCoverFragment">
+            <argument
+                android:name="coversData"
+                app:argType="com.sensibol.lucidmusic.singstr.gui.app.profile.self.CoverView"
+                app:nullable="false" />
+        </action>
+
+        <action
+            android:id="@+id/to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/to_userFeedFragment"
+            app:destination="@id/userFeedFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_leaderBoardFragment"
+            app:destination="@id/leaderBoardFragment" />
+        <action
+            android:id="@+id/to_coversDraftFragment"
+            app:destination="@id/coversDraftFragment" />
+        <action
+            android:id="@+id/to_proSubscriptionPlanFragment"
+            app:destination="@id/proSubscriptionPlanFragment" />
+        <action
+            android:id="@+id/to_followingFollowersPagerFragment"
+            app:destination="@id/followingFollowersPagerFragment" />
+        <action
+            android:id="@id/to_conceptLessonListFragment"
+            app:destination="@id/conceptLessonListFragment"/>
+
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/followingFollowersPagerFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.followersfollowing.FollowingFollowersPagerFragment"
+        android:label="FollowingFollowersPagerFragment"
+        tools:layout="@layout/fragment_following_following_pager">
+        <argument
+            android:name="goToSecondTab"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="username"
+            app:argType="string"/>
+        <argument
+            android:name="userId"
+            app:argType="string"/>
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <argument
+            android:name="profileData"
+            app:argType="com.sensibol.lucidmusic.singstr.gui.app.profile.self.ProfileView" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/to_notificationSettingFragment"
+            app:destination="@id/notificationSettingFragment" />
+        <action
+            android:id="@+id/to_proSubscriptionPlanFragment"
+            app:destination="@id/proSubscriptionPlanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playCoverFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.PlayCoverFragment"
+        android:label="PlayCoverFragment"
+        tools:layout="@layout/fragment_play_cover">
+        <argument
+            android:name="coversData"
+            app:argType="com.sensibol.lucidmusic.singstr.gui.app.profile.self.CoverView"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.mylist.MyListFragment"
+        android:label="MyListFragment"
+        tools:layout="@layout/fragment_my_list">
+
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/lessonListFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.lessonList.LessonListFragment"
+        android:label="SongListFragment"
+        tools:layout="@layout/fragment_new_lesson_list">
+
+        <deepLink
+            android:id="@+id/deeplinkLessonListFragment"
+            app:uri="https://www.singshala.com/app/conceptcategory/type/{listType}/lessons" />
+
+        <argument
+            android:name="listType"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/conceptLessonListFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.lessonList.ConceptLessonListFragment"
+        android:label="ConceptLessonListFragment"
+        tools:layout="@layout/fragment_concept_lesson_list">
+
+        <deepLink
+            android:id="@+id/deeplinkConceptLessonListFragment"
+            app:uri="https://www.singshala.com/app/concept/{conceptId}/lessons" />
+        <argument
+            android:name="conceptId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverCommentsFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.comments.CoverCommentsFragment"
+        android:label="FeedCommentFragment"
+        tools:layout="@layout/fragment_cover_comments">
+        <argument
+            android:name="coverId"
+            app:argType="string" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <deepLink
+            android:id="@+id/deepLinkCoverCommentsFragment"
+            app:uri="https://www.singshala.com/app/covers/{coverId}/comments" />
+        <action
+            android:id="@+id/action_coverCommentsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/to_coverReplyCommentsFragment"
+            app:destination="@id/coverReplyCommentsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverReplyCommentsFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.comments.CoverReplyCommentsFragment"
+        android:label="CoverReplyCommentsFragment"
+        tools:layout="@layout/fragment_cover_reply_comments">
+        <argument
+            android:name="coverId"
+            app:argType="string" />
+        <argument
+            android:name="commentId"
+            app:argType="string" />
+<!--        <argument-->
+<!--            android:name="comment"-->
+<!--            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Comment"/>-->
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/action_coverReplyCommentsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <deepLink
+            android:id="@+id/exerciseDeepLinkFragment"
+            app:uri="https://www.singshala.com/app/covers/{coverId}/comments/reply/{commentId}" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseLauncherFrag"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.exercise.ExerciseLauncherFragment"
+        android:label="ExerciseLauncherFragment"
+        tools:layout="@layout/fragment_exercise_launcher">
+        <argument
+            android:name="exercise"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Exercise"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="lesson"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Lesson"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <argument
+            android:name="exerciseId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <deepLink
+            android:id="@+id/exerciseDeepLinkFragment"
+            app:uri="https://www.singshala.com/app/exercise/{exerciseId}" />
+        <action
+            android:id="@+id/to_exerciseResultFrag"
+            app:destination="@id/exerciseResultFrag"
+            app:popUpTo="@id/exerciseLauncherFrag"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/to_exerciseLauncherFrag"
+            app:destination="@id/exerciseResultFrag"
+            app:popUpTo="@id/exerciseLauncherFrag"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment"
+            app:popUpTo="@id/lessonFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseResultFrag"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.learn.exercise.ExerciseResultFragment"
+        android:label="ExerciseResultFragment"
+        tools:layout="@layout/fragment_exercise_result">
+        <argument
+            android:name="exercise"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Exercise" />
+        <argument
+            android:name="lesson"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Lesson" />
+        <argument
+            android:name="exerciseScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.ExerciseScore" />
+        <argument
+            android:name="exerciseLaunchFromDeeplink"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment"
+            app:popUpTo="@id/lessonFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.FeedFragment"
+        android:label="FeedFragment"
+        tools:layout="@layout/fragment_feed">
+        <argument
+            android:name="tileIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_coverCommentsFragment"
+            app:destination="@id/coverCommentsFragment" />
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment"
+            app:popUpTo="@id/feedFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/to_profileFrag"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/genericFeedFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.generic.GenericFeedFragment"
+        android:label="GenericFeedFragment"
+        tools:layout="@layout/fragment_feed">
+        <argument
+            android:name="tileIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <deepLink
+            android:id="@+id/deepLinkGenericFeedFragment"
+            app:uri="https://www.singshala.com/app/feed" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_coverCommentsFragment"
+            app:destination="@id/coverCommentsFragment" />
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment" />
+        <action
+            android:id="@+id/to_profileFrag"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/songFeedFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.song.SongFeedFragment"
+        android:label="SongFeedFragment"
+        tools:layout="@layout/fragment_feed">
+        <argument
+            android:name="songId"
+            app:argType="string" />
+        <argument
+            android:name="tileIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <deepLink
+            android:id="@+id/deepLinkSongFeedFragment"
+            app:uri="https://www.singshala.com/app/feed/songs/{songId}?index={tileIndex}" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_coverCommentsFragment"
+            app:destination="@id/coverCommentsFragment" />
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment" />
+        <action
+            android:id="@+id/to_profileFrag"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverFeedFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.cover.CoverFeedFragment"
+        android:label="CoverFeedFragment"
+        tools:layout="@layout/fragment_feed">
+        <argument
+            android:name="coverId"
+            app:argType="string" />
+        <argument
+            android:name="tileIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <deepLink
+            android:id="@+id/deepLinkCoverFeedFragment"
+            app:uri="https://www.singshala.com/app/feed/covers/{coverId}" />
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_coverCommentsFragment"
+            app:destination="@id/coverCommentsFragment" />
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment" />
+        <action
+            android:id="@+id/to_profileFrag"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFeedFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.feed.user.UserFeedFragment"
+        android:label="UserFeedFragment"
+        tools:layout="@layout/fragment_feed">
+
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <argument
+            android:name="tileIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <deepLink
+            android:id="@+id/deepLinkUserFeedFragment"
+            app:uri="https://www.singshala.com/app/feed/users/{userId}?index={tileIndex}" />
+
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_coverCommentsFragment"
+            app:destination="@id/coverCommentsFragment" />
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment" />
+        <action
+            android:id="@+id/to_profileFrag"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/earnXpFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.player.EarnXpFragment"
+        android:label="earnXpFragment"
+        tools:layout="@layout/fragment_earn_xp">
+
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+
+        <action
+            android:id="@+id/to_learnFragment"
+            app:destination="@id/academyFragment" />
+        <action
+            android:id="@+id/action_earnXpFragment_to_learnFragment"
+            app:destination="@id/learnFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/videoPlayerActivity"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.player.VideoPlayerActivity"
+        android:label="VideoPlayerActivity"
+        tools:layout="@layout/activity_video_player">
+        <argument
+            android:name="lesson"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.Lesson"
+            app:nullable="true" />
+        <argument
+            android:name="isUserPro"
+            app:argType="boolean" />
+    </activity>
+
+    <fragment
+        android:id="@+id/leaderBoardFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.home.LeaderBoardFragment"
+        android:label="LeaderBoardFragment"
+        tools:layout="@layout/fragment_leaderboard">
+        <action
+            android:id="@+id/to_earnXpFragment"
+            app:destination="@id/earnXpFragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://www.singshala.com/app/leaderboard" />
+        <action
+            android:id="@+id/to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/to_profileFrag"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otherUserProfileFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.other.OtherUserProfileFragment"
+        android:label="OtherUserProfileFragment">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/to_userFeedFragment"
+            app:destination="@+id/userFeedFragment" />
+
+        <action
+            android:id="@+id/to_followingFollowersPagerFragment"
+            app:destination="@id/followingFollowersPagerFragment" />
+
+        <deepLink
+            android:id="@+id/deepLinkOtherUserProfileFragment"
+            app:uri="https://www.singshala.com/app/users/{userId}" />
+        <deepLink
+            android:id="@+id/deepLinkOtherUserProfileFragment2"
+            app:uri="uri://singshala/app/users/{userId}" />
+
+        <action
+            android:id="@id/to_conceptLessonListFragment"
+            app:destination="@id/conceptLessonListFragment"/>
+
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:destination="@id/lessonFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationSettingFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.NotificationSettingFragment"
+        android:label="fragment_notification_setting"
+        tools:layout="@layout/fragment_notification_setting" />
+
+    <fragment
+        android:id="@+id/proMembershipFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.subscription.ProMembershipFragment"
+        android:label="fragment_pro_membership"
+        tools:layout="@layout/fragment_pro_membership">
+        <action
+            android:id="@+id/to_learnDetailFragment"
+            app:popUpTo="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/lessonFragment" />
+        <action
+            android:id="@+id/to_leaderBoardFragment"
+            app:destination="@id/leaderBoardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailAnalysisFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.analysis.DetailedAnalysisFragment"
+        android:label="fragment_detailed_analysis"
+        tools:layout="@layout/fragment_detailed_analysis">
+
+        <argument
+            android:name="attemptId"
+            app:argType="string" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <argument
+            android:name="userMediaFilePath"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/to_proSubscriptionPlanFragment"
+            app:destination="@id/proSubscriptionPlanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/proSubscriptionPlanFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.payment.ProSubscriptionPlanFragment"
+        android:label="ProSubscriptionPlanFragment"
+        tools:layout="@layout/fragment_pro_subsciption_plan">
+        <action
+            android:id="@+id/to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/homeFragment" />
+        <deepLink
+            android:id="@+id/deepLinkProSubscriptionPlanFragment"
+            app:uri="https://www.singshala.com/app/pro/plans" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exclusiveFeaturesFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.exftr.ExclusiveFeaturesFragment"
+        android:label="ExclusiveFeatures"
+        tools:layout="@layout/fragment_exclusive_features">
+        <action
+            android:id="@+id/to_prepareSingHostFragment"
+            app:destination="@id/prepareSingHostFragment" />
+        <action
+            android:id="@+id/to_leaderBoardFragment"
+            app:destination="@id/leaderBoardFragment" />
+        <action
+            android:id="@+id/to_learnFragment"
+            app:destination="@id/learnFragment" />
+        <action
+            android:id="@+id/to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coversDraftFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.profile.self.drafts.CoverDraftsFragment"
+        android:label="CoverDrafts"
+        tools:layout="@layout/fragment_cover_drafts">
+
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+
+        <action
+            android:id="@+id/to_coverPreviewFragment"
+            app:destination="@+id/coverPreviewFragment">
+            <argument
+                android:name="song"
+                app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+            <argument
+                android:name="singScore"
+                app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+            <argument
+                android:name="attepmtId"
+                app:argType="string" />
+            <argument
+                android:name="mixPath"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/prepareSingHostFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.prepare.PrepareSingHostFragment"
+        android:label="PrepareSingHostFragment"
+        tools:layout="@layout/fragment_prepare_sing_host">
+        <argument
+            android:name="singMode"
+            android:defaultValue="record"
+            app:argType="string" />
+        <argument
+            android:name="songId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <deepLink
+            android:id="@+id/deepLinkPrepareSingHostFragmentW"
+            app:uri="https://www.singshala.com/app/songs/{songId}/{singMode}" />
+        <deepLink
+            android:id="@+id/deepLinkPrepareSingHostFragment"
+            app:uri="https://www.singshala.com/app/songs/{singMode}" />
+
+        <action
+            android:id="@+id/to_coverResultFragment"
+            app:destination="@id/coverResultFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+            android:id="@+id/to_practiceResultFrag"
+            app:destination="@id/practiceResultFrag"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/practiceResultFrag"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.result.practice.PracticeResultFragment"
+        android:label="PracticeResultFragment"
+        tools:layout="@layout/fragment_practice_result">
+
+        <argument
+            android:name="songMini"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+
+        <action
+            android:id="@+id/to_self"
+            app:destination="@id/practiceResultFrag"
+            app:popUpTo="@id/practiceResultFrag"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/to_coverResultFragment"
+            app:destination="@id/coverResultFragment"
+            app:popUpTo="@id/practiceResultFrag"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverResultFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.result.cover.CoverResultFragment"
+        android:label="CoverResultFragment"
+        tools:layout="@layout/fragment_cover_result">
+        <argument
+            android:name="songMini"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+
+        <action
+            android:id="@+id/to_coverProcessFragment"
+            app:destination="@id/coverProcessFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@+id/coverResultFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_scoreCardFragment"
+            app:destination="@id/scoreCardFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/scoreCardFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.result.cover.ScoreCardFragment"
+        android:label="ScoreCardFragment"
+        tools:layout="@layout/fragment_score_card">
+        <argument
+            android:name="songMini"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverProcessFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.process.CoverProcessFragment"
+        android:label="CoverProcessFragment"
+        tools:layout="@layout/fragment_cover_process">
+
+        <argument
+            android:name="song"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+        <argument
+            android:name="attemptId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/to_analysisVsPublishChoiceFragment"
+            app:destination="@id/analysisVsPublishChoiceFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@+id/coverProcessFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/analysisVsPublishChoiceFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.subscribe.AnalysisVsPublishChoiceFragment"
+        android:label="AnalysisVsPublishChoiceFragment"
+        tools:layout="@layout/fragment_analysis_vs_publish_choice">
+
+        <argument
+            android:name="song"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+        <argument
+            android:name="attemptId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@id/detailAnalysisFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@id/analysisVsPublishChoiceFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="attemptId"
+                app:argType="string" />
+            <argument
+                android:name="userId"
+                app:argType="string" />
+            <argument
+                android:name="userMediaFilePath"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+
+        <action
+            android:id="@+id/to_proSubscriptionPlanFragment"
+            app:destination="@id/proSubscriptionPlanFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@id/analysisVsPublishChoiceFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_coverPreviewFragment"
+            app:destination="@id/coverPreviewFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@id/analysisVsPublishChoiceFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverPreviewFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.preview.CoverPreviewFragment"
+        android:label="CoverPreviewFragment"
+        tools:layout="@layout/fragment_cover_preview">
+        <argument
+            android:name="song"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+        <argument
+            android:name="attepmtId"
+            app:argType="string" />
+        <argument
+            android:name="mixPath"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/to_publishCoverFragment"
+            app:destination="@id/coverPublishFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@id/coverPreviewFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/to_coverResultFragment"
+            app:destination="@id/coverResultFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"
+            app:popUpTo="@id/coverPreviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverThumbnailSelectionFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.publish.CoverThumbnailSelectionFragment"
+        android:label="CoverThumbnailSelectionFragment"
+        tools:layout="@layout/fragment_cover_thumbnail_selection">
+        <argument
+            android:name="videoPath"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="thumbnailTimeMS"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coverPublishFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.sing.publish.CoverPublishFragment"
+        android:label="PublishCoverFragment"
+        tools:layout="@layout/fragment_cover_publish">
+
+        <argument
+            android:name="song"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SongMini" />
+        <argument
+            android:name="singScore"
+            app:argType="com.sensibol.lucidmusic.singstr.domain.model.SingScore" />
+        <argument
+            android:name="attepmtId"
+            app:argType="string" />
+        <argument
+            android:name="mixPath"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/to_coverThumbnailSelectionFragment"
+            app:destination="@id/coverThumbnailSelectionFragment" />
+
+        <action
+            android:id="@+id/to_detailAnalysisFragment"
+            app:destination="@+id/detailAnalysisFragment"
+            app:popUpTo="@id/coverPublishFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contestFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.contest.ContestFragment"
+        android:label="ConestFragment"
+        tools:layout="@layout/fragment_contest">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/claimFreeSubscriptionFragment"
+        android:name="com.sensibol.lucidmusic.singstr.gui.app.payment.claim.ClaimFreeSubscriptionFragment"
+        android:label="ClaimFreeSubscriptionFragment"
+        tools:layout="@layout/fragment_claim_free_subscription">
+        <argument
+            android:name="code"
+            app:argType="string" />
+
+        <deepLink
+            android:id="@+id/deepLinkClaimFreeSubscriptionFragment"
+            app:uri="https://www.singshala.com/app/free_subcription/{code}" />
+
+        <action
+            android:id="@+id/to_proSubscriptionPlanFragment"
+            app:destination="@id/proSubscriptionPlanFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+
+</navigation>

@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "first_name": "Tony",
+      "last_name": "Stark",
+      "artist_name": "Robert",
+      "mobile_number": "9100700800",
+      "profile_picture": "www.profile_picture.com",
+      "email": "tonystacks@gmail.com",
+      "is_email_verified": true
+    }
+  }
+}

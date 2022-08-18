@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_rounded_practice_card">
+
+
+    <ProgressBar
+        android:id="@+id/pb_practice_remaining_time"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/black_circle"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="61"
+        android:progressDrawable="@drawable/circular_progress_practice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv__frg_main__practice_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        tools:text="6"
+        android:textColor="@color/primary1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_practice_remaining_time"
+        app:layout_constraintEnd_toEndOf="@id/pb_practice_remaining_time"
+        app:layout_constraintStart_toStartOf="@id/pb_practice_remaining_time"
+        app:layout_constraintTop_toTopOf="@id/pb_practice_remaining_time" />
+
+    <TextView
+        android:id="@+id/tv_practice_xp_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Practice for 15 mins to get 50xp"
+        android:textColor="@color/text_header_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_practice_remaining_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_practice_button"
+        app:layout_constraintStart_toEndOf="@id/pb_practice_remaining_time"
+        app:layout_constraintTop_toTopOf="@id/pb_practice_remaining_time" />
+
+    <TextView
+        android:id="@+id/tv_practice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_rounded_grey"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="12dp"
+        android:text="Practice"
+        android:textColor="@color/enhance_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_practice_xp_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_practice_xp_label"
+        app:layout_constraintTop_toTopOf="@id/tv_practice_xp_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

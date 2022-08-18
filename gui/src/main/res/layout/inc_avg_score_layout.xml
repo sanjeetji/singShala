@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:background="@drawable/bg_rounded_user_statics_card"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tv_avg_score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Avg Score"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_tune_timing"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_level_progress_circle"
+        android:indeterminate="true"
+        android:indeterminateOnly="false"
+        android:indeterminateTint="#8B50FF"
+        android:max="100"
+        android:progressDrawable="@drawable/circular_progress_level"
+        android:rotation="180"
+        android:visibility="visible"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_avg_score_label"
+        tools:progress="61" />
+
+    <TextView
+        android:id="@+id/tv_avg_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        tools:text="99"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hhgrotesk_bold"
+        app:layout_constraintTop_toTopOf="@id/pb_tune_timing"
+        app:layout_constraintBottom_toBottomOf="@id/pb_tune_timing"
+        app:layout_constraintStart_toStartOf="@id/pb_tune_timing"
+        app:layout_constraintEnd_toEndOf="@id/pb_tune_timing"/>
+
+    <TextView
+        android:id="@+id/tv_tune_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Tune"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_tune"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/pb_tune_timing"
+        app:layout_constraintTop_toTopOf="@id/pb_tune_timing" />
+
+
+    <TextView
+        android:id="@+id/tv_tune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/primary1"
+        android:textSize="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tv_tune_label"
+        app:layout_constraintTop_toTopOf="@id/tv_tune_label"
+        tools:text="45" />
+
+    <TextView
+        android:id="@+id/tv_timing_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Timing"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_timing"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/pb_tune_timing"
+        app:layout_constraintBottom_toBottomOf="@id/pb_tune_timing" />
+
+
+    <TextView
+        android:id="@+id/tv_timing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:textColor="@color/secondary_2"
+        android:textSize="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tv_timing_label"
+        app:layout_constraintTop_toTopOf="@id/tv_timing_label"
+        tools:text="45" />
+</androidx.constraintlayout.widget.ConstraintLayout>

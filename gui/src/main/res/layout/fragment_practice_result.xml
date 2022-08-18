@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:text="Your Score"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_final_score"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/progress_ring_final"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressDrawable="@drawable/circular_progress_final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_header"
+        tools:progress="61" />
+
+
+    <TextView
+        android:id="@+id/tvFinalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_final_score"
+        app:layout_constraintEnd_toEndOf="@+id/pb_final_score"
+        app:layout_constraintStart_toStartOf="@+id/pb_final_score"
+        app:layout_constraintTop_toTopOf="@+id/pb_final_score"
+        tools:text="61" />
+
+    <TextView
+        android:id="@+id/tv_earned_xps"
+        android:layout_width="237dp"
+        android:layout_height="139dp"
+        android:background="@drawable/bg_earned_xp"
+        android:paddingTop="12dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:text="71"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_final_score"
+        app:layout_constraintBottom_toTopOf="@id/btn_record"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="XP earned"
+        android:textAllCaps="true"
+        android:textColor="@color/white_ope_60"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_earned_xps"
+        app:layout_constraintStart_toStartOf="@id/tv_earned_xps"
+        app:layout_constraintTop_toTopOf="@id/tv_earned_xps" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="center"
+        android:text="Practice scores don’t add to your XP unfortunately. To earn XP and level up, make a cover and publish it."
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_final_score" />
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_rounded_secondary_button"
+        android:paddingHorizontal="24dp"
+        android:text="@string/make_a_cover_of_this_song"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/btn_practice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_earned_xps" />
+
+    <Button
+        android:id="@+id/btn_practice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/bg_rounded_grey"
+        android:paddingHorizontal="24dp"
+        android:text="@string/practice_again"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbDownloadProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ib_button_selector"
+        android:scaleType="center"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

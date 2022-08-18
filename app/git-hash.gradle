@@ -1,0 +1,13 @@
+ext {
+    myGitHash = getCurrentGitHash()
+    println "Current hash: " + myGitHash
+}
+
+def getCurrentGitHash() {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}

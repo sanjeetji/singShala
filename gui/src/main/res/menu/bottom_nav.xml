@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/selector_dashboard_icon"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/exploreFragment"
+        android:icon="@drawable/selector_explore_icon"
+        android:title="@string/explore"/>
+
+    <item
+        android:id="@+id/prepareSingHostFragment"
+        android:icon="@drawable/ic_mic_sing"
+        android:title="@string/sing_song"/>
+
+    <item
+        android:id="@+id/learnFragment"
+        android:icon="@drawable/selector_school_icon"
+        android:title="@string/shala"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile_text"/>
+
+
+    <!--<item
+        android:id="@+id/notificationsFragment"
+        android:icon="@drawable/selector_notification_icon"
+        android:visible="false"
+        android:title="@string/notifications" />-->
+</menu>

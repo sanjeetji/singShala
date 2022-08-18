@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:animateLayoutChanges="true">
+
+    <ImageButton
+        android:id="@+id/ibClose"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ib_button_selector"
+        android:scaleType="center"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_exercise_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Exercise Title"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@id/ibClose"
+        app:layout_constraintEnd_toStartOf="@id/ibClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_title"
+        app:layout_constraintTop_toTopOf="@id/ibClose" />
+
+    <TextView
+        android:id="@+id/tv_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Your score"
+        android:textColor="#fff"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_score_title_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Only you can view your score."
+        android:textColor="@color/white_ope_60"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_title" />
+
+    <ProgressBar
+        android:id="@+id/pb_final_score"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/progress_ring_final"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressTint="#9440FF"
+        android:progressDrawable="@drawable/circular_progress_final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_title_msg"
+        tools:progress="61" />
+
+    <TextView
+        android:id="@+id/tvFinalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/pb_final_score"
+        app:layout_constraintEnd_toEndOf="@+id/pb_final_score"
+        app:layout_constraintStart_toStartOf="@+id/pb_final_score"
+        app:layout_constraintTop_toTopOf="@+id/pb_final_score"
+        tools:text="61" />
+
+    <TextView
+        android:id="@+id/tv_final_score_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Very Good, you nailed it"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_final_score" />
+
+    <TextView
+        android:id="@+id/tv_earned_xps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="You earned +73xp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_final_score_msg"
+        app:layout_constraintBottom_toTopOf="@id/tv_btn_practice_again"/>
+
+    <TextView
+        android:id="@+id/tv_btn_practice_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_btn_practice_again"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:paddingHorizontal="28dp"
+        android:text="Practice Again"
+        android:paddingVertical="14dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tv_btn_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_btn_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/bg_rounded_grey"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:paddingHorizontal="28dp"
+        android:text="Finish"
+        android:paddingVertical="12dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="7dp">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/viewBorder"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:background="@drawable/bg_rounded_brownish_yellow_border" />
+
+        <TextView
+            android:id="@+id/tvPlanType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_brownish_yellow"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="7dp"
+            android:text="@string/popular"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvRsSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="\u20B9"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvPrice" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="31dp"
+                app:layout_constraintStart_toEndOf="@id/tvRsSymbol"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hkgrotesk_regular"
+                android:gravity="center"
+                android:text="\u20B9 1188 + GST"
+                android:textColor="@color/timer_text"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="@id/tvRsSymbol"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+            <TextView
+                android:id="@+id/tvPerTimeUnit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/hkgrotesk_regular"
+                android:gravity="center_vertical"
+                android:text="Per Month"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+                app:layout_constraintStart_toEndOf="@id/tvPrice"
+                app:layout_constraintTop_toTopOf="@id/tvPrice" />
+
+            <TextView
+                android:id="@+id/tvValidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_view_all"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="15dp"
+                android:text="12 Months"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvPrice" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:text="Save upto 35%"
+                android:textColor="@color/timer_text"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="@id/tvValidity"
+                app:layout_constraintStart_toStartOf="@id/tvValidity"
+                app:layout_constraintTop_toBottomOf="@id/tvValidity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

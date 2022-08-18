@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/activity_test.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/bottomsheet_month.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/dialog_delete_your_account.xml" value="0.1526268115942029" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/dialog_reply_on_comment.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/dialog_verify_otp.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/fragment_home_demo.xml" value="0.2127946127946128" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/fragment_login_demo.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/fragment_teacher_details_demo.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/otp_view_layout.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_comment_search_user.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_cover_lesson_group.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_login.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_practice.xml" value="0.41656365883807167" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_teacher_bio.xml" value="0.11730072463768115" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_up_next.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_up_next2.xml" value="0.178125" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/tile_yellow.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/debug/res/layout/vp_tile_login.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-hdpi/bg_rounded_phone_number.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-hdpi/bg_rounded_phone_number_blank.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-ldpi/bg_rounded_grey_sing_song.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-ldpi/blue_circle_pro_member.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-ldpi/white_circle.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-ldpi/white_circle_design.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/bg_rounded_blue_one.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/bg_rounded_card_bue_login_with_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/bg_rounded_card_login_with_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/blue_circle_one.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/default_dot.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/selected_dot.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/selector_product_image.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-mdpi/tab_selector.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_card_month_outline.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_card_next.xml" value="0.18518518518518517" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_card_outline_blue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_dark_blue_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_day.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_light_blue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_otp_blue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_otp_color.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_singer_category.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_rounded_white_singer_category.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/bg_tile_explore_cover_overlay.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-nodpi/selector_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-xxxhdpi/bg_rounded_gray.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable-xxxhdpi/bg_yellow.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_bottom_sheet.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_btn_round_outline_only.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_comment_done_disabled.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_comments.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_curved_rectangle_grey_bar.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_darkblue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_exercise.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_exercise_start.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_grey_sing_a_song.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_record_first_song_cta_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_round_top_corners.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_round_yellow.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_black.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_blue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_blue_one.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_bue_login_with_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_login_with_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_month_outline.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_next.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_otp_color.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_outline.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card_outline_blue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_dark_blue_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_dark_grey.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_day.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_gradient.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_gray.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_green.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_grey.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_grey_button.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_grey_difficulty.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_grey_sing_song.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_light_blue.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_otp.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_phone_number_blank.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_practice_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_purpule.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_red.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_score_card_cover.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_secondary_button.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_singer_category.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_user_statics_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_white_singer_category.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_yellow.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_roundedsquare_purple.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_tile_create_cover.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_tile_explore_cover_overlay.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_tile_profile_cover_overlay.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_white_explore_genre.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_yellow.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/black_circle.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/blue_circle.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/blue_circle_one.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/blue_circle_pro_member.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/blue_circle_small.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/blue_secondary_circle.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/circular_progress_practice.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ib_button_selector.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_arrow_back.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_audiotrack.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_baseline_download.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_baseline_person_24.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_cover_play_tiny.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_explore_trending.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_location.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_message_init.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_mic_sing.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_more_vert.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_more_white_vert.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_music_node.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_play.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_plus.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_pro_emblem.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_profile.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_school.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_school_selected.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_shala.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_share_baseline.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_splash_bg.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/next_button_drawable.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_enable_disable.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_explore_icon.xml" value="0.19270833333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_follow_following_checkbox.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_learning_mode.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_school_icon.xml" value="0.19270833333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/shape_dark_grey_corner_radius.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/shape_grey_corner_radius.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/tab_layout_design.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/drawable/white_circle.xml" value="0.20833333333333334" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/activity_login.xml" value="0.1140625" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/activity_registration.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/activity_singstr.xml" value="0.16983695652173914" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/activity_video_player.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_captions.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_description.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_edit_caption.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_feed.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_feed_share_option.xml" value="0.18" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_feed_updated.xml" value="0.12635869565217392" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/bottomsheet_user_menu.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/chat_view2.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_block_user.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_cover_feed_options.xml" value="0.22" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_daily_login.xml" value="0.16576086956521738" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_delete_cover.xml" value="0.1526268115942029" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_delete_your_account.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_delete_your_cover.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_reply_on_comment.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialog_report_captions_quality.xml" value="0.1526268115942029" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/dialogue_report_bug.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_academy.xml" value="0.21478463329452852" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_analysis_vs_publish_choice.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_app_walk_through.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_block_singer.xml" value="0.22" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_chat.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_concept_lesson_list.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_contest.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_comments.xml" value="0.21" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_drafts.xml" value="0.22" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_preview.xml" value="0.17255434782608695" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_process.xml" value="0.18" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_publish.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_reply_comments.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_result.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_cover_thumbnail_selection.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_detailed_analysis.xml" value="0.2" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_earn_xp.xml" value="0.1" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_edit_profile.xml" value="0.14628623188405798" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_exclusive_features.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_exercise_launcher.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_exercise_result.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_explore.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_feed.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_follow.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_followers.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_following.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_following_following_pager.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_genres.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_home.xml" value="0.22255729794933654" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_leaderboard.xml" value="0.2" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_learn.xml" value="0.16983695652173914" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_lesson.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_my_list.xml" value="0.1897644927536232" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_new_lesson_list.xml" value="0.15443840579710144" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_notifications.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_on_board_details.xml" value="0.21" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_on_board_name.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_other_teacher_details.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_practice_result.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_prepare_sing_host.xml" value="0.15307971014492755" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_profile.xml" value="0.19462025316455697" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_profile_one.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_score_card.xml" value="0.13903985507246377" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_search.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_sing_mode.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_singer_category.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_singer_type.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_song_group_list.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_song_list.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_songs.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_teacher_details.xml" value="0.2" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_teacher_other_bio.xml" value="0.11730072463768115" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_teacher_self_bio.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_teacher_self_covers.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_teacher_self_lesson.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_tuning_and_timing.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_user_first_last_name.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_user_gender.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_user_name.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_user_other_profile.xml" value="0.29902755267423015" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_user_other_profile_one.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_verify_otp.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_web_view.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/inc_avg_score_layout.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/inc_contest_entry_widget.xml" value="0.1" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/inc_contest_winner_congratulation.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/inc_rank_layout.xml" value="0.75" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/inc_user_statics.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/inc_watch_time_layout.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/item_learn_header.xml" value="0.16983695652173914" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/item_loading_learn.xml" value="0.16983695652173914" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/item_song_category.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/item_textview.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/layout_exoplayer_controller_view.xml" value="0.17255434782608695" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/layout_search.xml" value="0.161231884057971" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/popup_user_profile.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/profile_child.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tab_bar_learn.xml" value="0.15489130434782608" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_academy_answer_option.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_academy_question.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_corousel.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_cover.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_cover_draft.xml" value="0.2" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_cover_lesson_group.xml" value="0.18" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_cover_one.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_cover_profile.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_cover_test.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_create_cover.xml" value="0.16" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_explore_feed_all_song_cover.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_explore_feed_cover.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_explore_song.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_explore_song_header.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_feed_comment_fullview.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_feed_cover.xml" value="0.5" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_feed_player.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_follow_view.xml" value="0.22" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_follower_view.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_following_view.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_genre.xml" value="0.15307971014492755" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_leaderboard_rank.xml" value="0.17481884057971014" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_lesson_big.xml" value="0.2" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_lesson_group.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_lesson_mini.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_my_list.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_notification.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_on_board_option.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_payment_failure.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_practice_now.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_practice_now_profile.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_related_song.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_search_lesson.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_search_song.xml" value="0.16621376811594202" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_search_user.xml" value="0.14764492753623187" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_song.xml" value="0.25" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_song_with_sing_cta.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_teacher_attribute_details.xml" value="0.1272644927536232" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_teacher_experience.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_up_next.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_user_comment.xml" value="0.33" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/layout/tile_vocal_excercise.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/menu/bottom_nav.xml" value="0.22" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/gui/src/main/res/menu/mylist_menu.xml" value="0.1265625" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/mobicomkitui/src/main/res/layout/al_service_disconnection_layout.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/mobicomkitui/src/main/res/layout/contact_select_layout.xml" value="0.14990942028985507" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/mobicomkitui/src/main/res/layout/people_activity.xml" value="0.1921875" />
+        <entry key="..\:/AppZlogic/Singh_Shala/SingShala_App/singshala-android/mobicomkitui/src/main/res/layout/quickconversion_activity.xml" value="0.14990942028985507" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_blue.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_card.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_day.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_red.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_singer_category.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_view_all.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_white_singer_category.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_rounded_yellow.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_roundedsquare_purple.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/bg_shaded.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_arrow_back.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_arrow_forward.xml" value="0.1345" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_dashboard.xml" value="0.1" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_explore.xml" value="0.1" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_explore_selected.xml" value="0.1" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_message_init.xml" value="0.153" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_notification.xml" value="0.153" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_person.xml" value="0.153" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/ic_profile.xml" value="0.153" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_dashboard_icon.xml" value="0.1" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/drawable/selector_explore_icon.xml" value="0.1405" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/activity_singstr.xml" value="0.10643115942028986" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_academy.xml" value="0.18" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_exercise_result.xml" value="0.12182971014492754" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_home.xml" value="0.11775362318840579" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_learn.xml" value="0.12182971014492754" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_lesson.xml" value="0.1308876811594203" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_my_list.xml" value="0.18206521739130435" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_new_lesson_list.xml" value="0.15" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/layout/fragment_web_view.xml" value="0.18206521739130435" />
+        <entry key="..\:/Appzlogic/SingShala_App/singshala-android/gui/src/main/res/menu/bottom_nav.xml" value="0.1921875" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable-nodpi/bg_comment_done_disabled.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable-nodpi/bg_comment_done_enabled.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/bg_comments.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/bg_rewards.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/bg_roundedsquare_purple.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/button_drawable_grey.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/check_box_text_white_black.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/cv_bg.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/detail_radio_selector.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_camera.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_clock.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_location.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_mic_sing.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_more_white_vert.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_music_node.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_notification.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_profile.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_send.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/ic_shala.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/round_bg_chat.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/drawable/selector_options.xml" value="0.2203125" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/chat_view.xml" value="0.17844202898550723" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/chat_view2.xml" value="0.17844202898550723" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/fragment_chat.xml" value="0.17844202898550723" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/fragment_cover_comments.xml" value="0.25" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/fragment_home.xml" value="0.37592592592592594" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/fragment_message.xml" value="0.1" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/messages_main_view2.xml" value="0.18" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/gui/src/main/res/layout/tile_feed_comment_fullview.xml" value="0.22" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/mobicomkitui/src/main/res/layout/al_conversation_fragment.xml" value="0.1" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/mobicomkitui/src/main/res/layout/al_conversation_item_layout.xml" value="0.5" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/mobicomkitui/src/main/res/layout/conversation_app_bar.xml" value="0.15443840579710144" />
+        <entry key="..\:/Appzlozic Android Projetcs/New folder (4)/mobicomkitui/src/main/res/layout/mobicom_message_list.xml" value="0.1" />
+        <entry key="gui/src/debug/res/layout/bottomsheet_feed_lesson.xml" value="0.2101851851851852" />
+        <entry key="gui/src/debug/res/layout/error_state.xml" value="0.2101851851851852" />
+        <entry key="gui/src/main/res/drawable-nodpi/bg_tile_explore_cover_overlay.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_average_tune_progress_circle.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_draft_card.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_level_progress_circle.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_record_first_song_cta_card.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_rounded_black.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_rounded_card.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_rounded_grey.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_rounded_practice_card.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_rounded_purpule.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_rounded_view_all.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/bg_stage_processing.xml" value="0.5" />
+        <entry key="gui/src/main/res/drawable/bg_tile_song.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/blue_circle.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/circular_progress_average_timing.xml" value="0.1" />
+        <entry key="gui/src/main/res/drawable/circular_progress_average_tune.xml" value="0.1" />
+        <entry key="gui/src/main/res/drawable/circular_progress_level.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/circular_progress_practice.xml" value="0.1" />
+        <entry key="gui/src/main/res/drawable/circular_progress_timing_learn.xml" value="0.1" />
+        <entry key="gui/src/main/res/drawable/circular_progress_timing_level.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/circular_progress_tune.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/ic_delete_alpha_50.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/drawable/ic_white_mic.xml" value="0.24635416666666668" />
+        <entry key="gui/src/main/res/layout/activity_login.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/activity_singstr.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/activity_splash.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_analysis_vs_publish_choice.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_app_walk_through.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_appwalkthrough.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_cover_drafts.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_cover_preview.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_cover_process.xml" value="0.25" />
+        <entry key="gui/src/main/res/layout/fragment_cover_publish.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_detailed_analysis.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_exclusive_features.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_home.xml" value="0.335" />
+        <entry key="gui/src/main/res/layout/fragment_learn.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_login.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_prepare_sing_host.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_pro_membership.xml" value="0.375" />
+        <entry key="gui/src/main/res/layout/fragment_setting.xml" value="0.45" />
+        <entry key="gui/src/main/res/layout/fragment_sing_mode.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_song_selector_host.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_songs.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/fragment_tuning_and_timing.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/slide_appwalkthrough.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_cover_draft.xml" value="0.5" />
+        <entry key="gui/src/main/res/layout/tile_exclusive_feature.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_explore_feed_cover.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_explore_song.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_explore_song_header.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_feed_player.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_practice_now.xml" value="0.23020833333333332" />
+        <entry key="gui/src/main/res/layout/tile_search_song.xml" value="0.1140625" />
+        <entry key="gui/src/main/res/layout/tile_song.xml" value="0.335" />
+        <entry key="gui/src/main/res/menu/bottom_nav.xml" value="0.23020833333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="singShala.gui" />
+      </set>
+    </option>
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

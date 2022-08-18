@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/lesson_card_bg">
+
+    <ImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="18dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMyListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:maxLength="25"
+        android:maxLines="2"
+        android:minLines="1"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/iv_thumbnail"
+        app:layout_constraintTop_toTopOf="@id/iv_thumbnail"
+        tools:text="10 Singing Techniques to Improve Your Voice perfectly.." />
+
+    <TextView
+        android:id="@+id/tvTuningLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:padding="2dp"
+        android:textAllCaps="true"
+        android:textColor="@color/secondary_2"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_thumbnail"
+        app:layout_constraintTop_toBottomOf="@id/tvMyListTitle"
+        tools:text="Tuning" />
+
+    <TextView
+        android:id="@+id/tvItemAddedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:padding="2dp"
+        android:textColor="@color/timer_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTuningLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvMyListTitle"
+        tools:text="Added 2 days ago" />
+
+    <ImageView
+        android:id="@+id/ivOverFlow"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:alpha="0.5"
+        android:padding="12dp"
+        android:src="@drawable/ic_more_vert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

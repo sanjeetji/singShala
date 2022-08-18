@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLoader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_page"
+        android:padding="16dp">
+
+
+        <include
+            android:id="@+id/includeHeader"
+            layout="@layout/item_learn_header"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llSelector"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includeHeader">
+
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/shape_grey_loading" />
+
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/shape_grey_loading" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/shape_grey_loading" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/shape_grey_loading" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivLessonThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llSelector" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="52dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/shape_grey_loading"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivLessonThumbnail"
+            app:layout_constraintStart_toStartOf="@id/ivLessonThumbnail" />
+
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLessonThumbnail" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="300dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+        <ImageView
+            android:id="@+id/ivLearn1"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv__tile_lesson__time1"
+            android:layout_width="52dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/shape_grey_loading"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivLearn1"
+            app:layout_constraintStart_toStartOf="@id/ivLearn1" />
+
+
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLearn1" />
+
+        <TextView
+            android:id="@+id/tvTechnique1"
+            android:layout_width="300dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle1" />
+
+        <ImageView
+            android:id="@+id/ivLearn2"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTechnique1" />
+
+        <TextView
+            android:id="@+id/tv__tile_lesson__time2"
+            android:layout_width="52dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/shape_grey_loading"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivLearn2"
+            app:layout_constraintStart_toStartOf="@id/ivLearn2" />
+
+
+        <TextView
+            android:id="@+id/tvTitle2"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLearn2" />
+
+        <TextView
+            android:id="@+id/tvTechnique2"
+            android:layout_width="300dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_grey_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

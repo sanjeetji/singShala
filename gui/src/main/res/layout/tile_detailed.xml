@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvTile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@color/bg_page"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_rounded_rectangle_view_all"
+        android:padding="18dp">
+
+        <ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/blue_circle"
+            app:layout_constraintBottom_toBottomOf="@id/tvTune"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@id/ivCircle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/sing_tune_and_time" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTiming"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tv_time_song_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTune"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTiming"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Tuning was incorrect" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llcCTA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTiming"
+            app:layout_constraintTop_toBottomOf="@id/tvTune">
+
+            <TextView
+                android:id="@+id/tvPreview"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_view_all"
+                android:drawableStart="@drawable/ic_pause_small"
+                android:drawableTint="@color/timer_text"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="15dp"
+                android:text="Preview"
+                android:textColor="@color/text_header_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvCorrection"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_correction_green"
+                android:drawableStart="@drawable/ic_pause_small"
+                android:drawableTint="@color/timer_text"
+                android:fontFamily="@font/hhgrotesk_bold"
+                android:gravity="center"
+                android:drawablePadding="7dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="Correction"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

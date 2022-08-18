@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="16dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg_rounded_grey"
+    android:backgroundTint="@color/bg_card"
+    android:paddingVertical="16dp">
+
+    <ImageView
+        android:id="@+id/ivMusic"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:scaleType="center"
+        android:background="@drawable/bg_rounded_primary_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_mic_sing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="null"
+        tools:src="@tools:sample/avatars"
+        app:layout_constraintTop_toTopOf="@+id/ivMusic"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMusic"
+        app:layout_constraintStart_toEndOf="@+id/ivMusic"
+        />
+
+    <TextView
+        android:id="@+id/tvLyrics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:maxLines="1"
+
+        android:ellipsize="end"
+        tools:text="Aap jaisa Koi meri zindagi ma aaye to baat ban jaaye"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+        app:layout_constraintEnd_toStartOf="@id/tvArtisit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvArtisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        tools:text="Nazia Hasan"
+        android:textColor="@color/white_ope_70"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLyrics"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPractice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="start|top"
+        android:maxLines="1"
+        android:textAllCaps="false"
+        android:textColor="@color/white_ope_70"
+        android:textSize="12dp"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/tvLyrics"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Aap Jaisa Koi Mere Zind... " />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    def ext = rootProject.extensions.getByName('ext')
+
+    compileSdkVersion ext.compile_sdk_version
+    buildToolsVersion ext.build_tools_version
+
+    defaultConfig {
+        minSdkVersion ext.min_sdk_version
+        targetSdkVersion ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField("String", "MESSAGING_APP_ID", '"18c8701b2d1a4838e673b1aa4d9eae"')
+
+        testInstrumentationRunner "com.sensibol.lucidmusic.singstr.SingstrTestRunner"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    flavorDimensions "version"
+
+    productFlavors {
+        stage {
+            flavorDimensions "version"
+            buildConfigField "String", "APP_BANNER_AD_KEY" , '"ca-app-pub-3940256099942544/6300978111"'
+            buildConfigField "String", "APP_INTERSTITIAL_AD_KEY" , '"ca-app-pub-3940256099942544/1033173712"'
+        }
+        production {
+            flavorDimensions "version"
+            buildConfigField "String", "APP_BANNER_AD_KEY" , '"ca-app-pub-9498179823538437/4759801304"'
+            buildConfigField "String", "APP_INTERSTITIAL_AD_KEY" , '"ca-app-pub-9498179823538437/4083469293"'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    packagingOptions {
+        //Your other packaging options go here
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ECLIPSE_.SF'
+        exclude 'META-INF/ECLIPSE_.RSA'
+    }
+}
+
+dependencies {
+    api project(path: ':mobicomkit')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation platform(appDependencies.firebaseBoM)
+
+    // TODO - move to dependencies.gradle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.github.claucookie.miniequalizer:library:1.0.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.webengage:android-sdk:3.18.4@aar'
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+    api 'com.google.guava:guava:29.0-android'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    def paging_version = "3.0.1"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    //Google Play Service Auth
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.4.0'
+//    implementation 'com.facebook.android:facebook-login:5.15.1'
+//    api 'com.linkedin.android.spyglass:spyglass:3.0.1'
+//    implementation 'com.github.percolate:mentions:0.1.1'
+
+//    implementation 'com.arthenica:ffmpeg-kit-full:4.5.1'
+
+    //FFMPEG
+
+//    implementation "com.github.SimformSolutionsPvtLtd:SSffmpegVideoOperation:1.0.7"
+    //https://github.com/SimformSolutionsPvtLtd/SSffmpegVideoOperation
+
+
+    // development
+    def appDependencies = rootProject.ext.appDependencies
+    api project(':base')
+    api project(':core')
+
+    api project(':mobicomkitui')
+
+    api appDependencies.core
+    api appDependencies.appcompat
+    api appDependencies.kotlinStdlibJdk7
+    api appDependencies.lifecyleViewModel
+    api appDependencies.lifecyleLiveData
+    api appDependencies.lifecycleRuntime
+    api appDependencies.fragmentKtx
+    api appDependencies.activityKtx
+    api appDependencies.navFragment
+    api appDependencies.navUi
+    api appDependencies.camera2
+    api appDependencies.cameraView
+    api appDependencies.cameraLifecycle
+    api appDependencies.timber
+    api appDependencies.constraintlayout
+    api appDependencies.recyclerview
+    api appDependencies.cardview
+    api appDependencies.preference
+    api appDependencies.playServiceAuth
+    api appDependencies.glide
+    api appDependencies.flexbox
+    api appDependencies.messaging
+    api appDependencies.dynamicLink
+    api appDependencies.karaoke
+    api appDependencies.hiltAndroid
+    api appDependencies.hiltXViewModel
+    api appDependencies.hiltXNavFrag
+    api appDependencies.googleAd
+    api appDependencies.exoPlayerCore
+    api appDependencies.exoPlayerUi
+    api appDependencies.exoPlayerHls
+    api appDependencies.billing
+    api appDependencies.facebook_analytics
+
+    kapt appDependencies.hiltCompiler
+
+    // test
+    def testDependencies = rootProject.ext.testDependencies
+
+    debugImplementation testDependencies.fragmentTesting
+
+    testImplementation testDependencies.junit
+    androidTestDebugImplementation project(':testutils')
+    androidTestImplementation testDependencies.hitlTesting
+    androidTestImplementation testDependencies.junitAndroidX
+    androidTestImplementation testDependencies.espressoCore
+    androidTestImplementation testDependencies.espressoIntents
+    androidTestImplementation testDependencies.testRunner
+    androidTestImplementation testDependencies.testRules
+    androidTestImplementation testDependencies.navTesting
+
+    kaptAndroidTest testDependencies.hiltCompiler
+}

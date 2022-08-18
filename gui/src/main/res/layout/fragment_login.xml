@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_windows">
+
+    <ImageView
+        android:id="@+id/iv_rotating_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_splash_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/singstr_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_powered_by_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:gravity="center"
+        android:text="Powered by "
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/iv_tsm_logo"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <ImageView
+        android:id="@+id/iv_tsm_logo"
+        android:layout_width="84dp"
+        android:layout_height="21dp"
+        android:layout_marginHorizontal="2dp"
+        android:src="@drawable/ic_powred_by"
+        app:layout_constraintBottom_toBottomOf="@id/tv_powered_by_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tv_powered_by_label"
+        app:layout_constraintTop_toTopOf="@id/tv_powered_by_label" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpLogin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:visibility="visible"
+        android:layout_marginVertical="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cl_bottom_view"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/vpLogin"
+        app:tabBackground="@drawable/selector_tab_login"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_round_30"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvPhoneNumberView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center"
+            android:text="Login with your Phone Number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/tilPhoneNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhoneNumber"
+            style="@style/MyTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLoginWithOtp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="18dp"
+                android:hint="Enter Your Number"
+                android:inputType="number"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvLoginWithOtp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/bg_rounded_card_login_with_otp"
+            android:enabled="false"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="Login with OTP"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvOrLoginWith"
+            app:layout_constraintEnd_toEndOf="@+id/tilPhoneNumber"
+            app:layout_constraintStart_toStartOf="@+id/tilPhoneNumber" />
+
+
+        <TextView
+            android:id="@+id/tvOrLoginWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="center"
+            android:text="Or Login with"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvTnC"
+            app:layout_constraintEnd_toStartOf="@id/btn_login_fb"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login_perform"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrLoginWith"
+            app:layout_constraintEnd_toStartOf="@id/btn_login_google"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tvOrLoginWith"
+            app:layout_constraintTop_toTopOf="@id/tvOrLoginWith" />
+
+        <ImageView
+            android:id="@+id/btn_login_fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:src="@drawable/ic_facebook"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrLoginWith"
+            app:layout_constraintEnd_toStartOf="@id/btn_login_google"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tvOrLoginWith"
+            app:layout_constraintTop_toTopOf="@id/tvOrLoginWith" />
+
+        <ImageView
+            android:id="@+id/btn_login_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hhgrotesk_bold"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_google"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrLoginWith"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/btn_login_fb"
+            app:layout_constraintTop_toTopOf="@id/tvOrLoginWith" />
+
+        <TextView
+            android:id="@+id/tvTnC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColorLink="@color/white"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:text="@string/tncSign"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/v_loading"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@color/bg_windows_opp_90"
+            app:layout_constraintTop_toTopOf="@id/cl_bottom_view"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ProgressBar
+            android:id="@+id/pbLoading_bar"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateTint="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbLoading"
+            app:constraint_referenced_ids="v_loading, pbLoading_bar"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

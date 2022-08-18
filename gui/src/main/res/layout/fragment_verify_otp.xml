@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_sharp_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:text="Enter OTP"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivBack"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+    <TextView
+        android:id="@+id/tv_enter_six_digit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:text="Enter the 6 Digit Otp bellow sent on your Phone Number"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"/>
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/hhgrotesk_bold"
+        tools:text="+91 9876762531"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@id/tv_enter_six_digit_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_six_digit_text" />
+
+    <TextView
+        android:id="@+id/tvChangeNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:text="Change Number"
+        android:textColor="#6482FF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/tvPhoneNumber"
+        app:layout_constraintTop_toTopOf="@+id/tvPhoneNumber"
+        app:layout_constraintBottom_toTopOf="@id/v_change_number_underline"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <View
+        android:id="@+id/v_change_number_underline"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#6482FF"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="@id/tvChangeNumber"
+        app:layout_constraintStart_toStartOf="@id/tvChangeNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvChangeNumber"
+        app:layout_constraintBottom_toBottomOf="@id/tvPhoneNumber"/>
+
+    <com.sensibol.lucidmusic.singstr.gui.login.OtpView
+        android:id="@+id/otpView"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/bg_page"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        tools:text="00:15"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpView" />
+
+    <TextView
+        android:id="@+id/tvResend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:enabled="false"
+        android:text="Resend"
+        android:textColor="#6482FF"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpView" />
+
+    <TextView
+        android:id="@+id/tvDidNotGetOtp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/hkgrotesk_regular"
+        android:text="Did Not Get OTP?"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvResend"
+        app:layout_constraintEnd_toStartOf="@+id/tvResend"
+        app:layout_constraintTop_toTopOf="@+id/tvResend" />
+
+    <TextView
+        android:id="@+id/tvVerifyOtp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/selector_btn_enable_disable"
+        android:fontFamily="@font/hhgrotesk_bold"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:text="Verify"
+        android:textAllCaps="true"
+        android:enabled="false"
+        android:textColor="@color/selector_color_btn_enable_disable"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

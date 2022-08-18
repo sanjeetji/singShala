@@ -1,0 +1,15 @@
+include ':filesystem'
+include ':network'
+include ':gui'
+include ':testutils'
+include ':db'
+include ':core'
+include ':base'
+include ':app'
+
+rootProject.name = "singShala"
+include ':mobicomkitui'
+include ':mobicommons'
+include ':mobicomkit'
+include ':ffmpeg'
+include ':android-ffmpeg'

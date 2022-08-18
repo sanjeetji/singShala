@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/bg_rounded_card"
+    android:backgroundTint="@color/bg_windows">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clReportVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:paddingEnd="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_detailedAnalysis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:visibility="visible"
+            android:text="Detailed Analysis"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_editCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:text="Edit Caption"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detailedAnalysis" />
+
+        <TextView
+            android:id="@+id/tv_sharevideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:text="Share Video"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_editCaption" />
+
+        <TextView
+            android:id="@+id/tv_makePrivate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:text="Make Private"
+            android:textColor="@color/song_subtitle"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sharevideo" />
+
+        <TextView
+            android:id="@+id/tv_deleteCover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/hkgrotesk_regular"
+            android:gravity="left"
+            android:padding="15dp"
+            android:text="Delete Cover"
+            android:textColor="@color/bg_red"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_makePrivate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
